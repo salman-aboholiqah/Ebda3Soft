@@ -1,0 +1,480 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A753CF06-0E6C-4DB9-8D59-B39BE346A981}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ebda3Soft</RootNamespace>
+    <AssemblyName>Ebda3Soft</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v21.1" />
+    <Reference Include="DevExpress.Data.Desktop.v21.1" />
+    <Reference Include="DevExpress.Data.v21.1" />
+    <Reference Include="DevExpress.Images.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v21.1.Core" />
+    <Reference Include="DevExpress.Utils.v21.1" />
+    <Reference Include="DevExpress.XtraBars.v21.1" />
+    <Reference Include="DevExpress.Sparkline.v21.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v21.1" />
+    <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\CustomAttributes\IgnoreSerializationAttribute.cs" />
+    <Compile Include="Core\Database\BaseEntity.cs" />
+    <Compile Include="Core\Database\Ebda3SoftDBInitializer.cs" />
+    <Compile Include="Core\Database\Entities\Financial\Account.cs" />
+    <Compile Include="Core\Database\Entities\Financial\AccountType.cs" />
+    <Compile Include="Core\Database\Entities\Financial\Currency.cs" />
+    <Compile Include="Core\Database\Entities\Financial\Journal.cs" />
+    <Compile Include="Core\Database\Entities\Financial\JournalType.cs" />
+    <Compile Include="Core\Database\Entities\GeneralSettings\TransactionLog.cs" />
+    <Compile Include="Core\Database\Entities\GeneralSettings\User.cs" />
+    <Compile Include="Core\Database\Entities\GeneralSettings\UserViewInfo.cs" />
+    <Compile Include="Core\Database\IEntityControl.cs" />
+    <Compile Include="Core\Database\Interfaces\IClosable.cs" />
+    <Compile Include="Core\Models\UserViewInfoDefaultList.cs" />
+    <Compile Include="Core\Models\ViewInfo.cs" />
+    <Compile Include="Core\Database\Entities\Inventory\Item.cs" />
+    <Compile Include="Core\Database\Entities\Inventory\ItemType.cs" />
+    <Compile Include="Core\Database\Entities\Inventory\ItemUnit.cs" />
+    <Compile Include="Core\Database\Entities\Inventory\Unit.cs" />
+    <Compile Include="Core\Database\Interfaces\IMemberable.cs" />
+    <Compile Include="Core\Database\Interfaces\ISupportCollectionActions.cs" />
+    <Compile Include="Core\Database\Interfaces\ISupportEntityActions.cs" />
+    <Compile Include="Core\Database\SharedActions.cs" />
+    <Compile Include="Core\Database\SQLServerDbContext.cs" />
+    <Compile Include="Core\Enums\JournalView.cs" />
+    <Compile Include="Core\Enums\SystemInfo.cs" />
+    <Compile Include="Core\Enums\TransactionType.cs" />
+    <Compile Include="Core\Models\TransactionLogInfo.cs" />
+    <Compile Include="Core\SharedFormat.cs" />
+    <Compile Include="Core\SharedView.cs" />
+    <Compile Include="MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302130017353_InitDatabase.cs" />
+    <Compile Include="Migrations\202302130017353_InitDatabase.designer.cs">
+      <DependentUpon>202302130017353_InitDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302131740273_addPermissionsTables.cs" />
+    <Compile Include="Migrations\202302131740273_addPermissionsTables.designer.cs">
+      <DependentUpon>202302131740273_addPermissionsTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302131800187_EditUserViewTable.cs" />
+    <Compile Include="Migrations\202302131800187_EditUserViewTable.designer.cs">
+      <DependentUpon>202302131800187_EditUserViewTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302131924301_EditUsersTable.cs" />
+    <Compile Include="Migrations\202302131924301_EditUsersTable.designer.cs">
+      <DependentUpon>202302131924301_EditUsersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302131929369_EditUsersTable2.cs" />
+    <Compile Include="Migrations\202302131929369_EditUsersTable2.designer.cs">
+      <DependentUpon>202302131929369_EditUsersTable2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302131935405_EditUsersTableAddEnabledProperty.cs" />
+    <Compile Include="Migrations\202302131935405_EditUsersTableAddEnabledProperty.designer.cs">
+      <DependentUpon>202302131935405_EditUsersTableAddEnabledProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302132047036_UpdateLogs.cs" />
+    <Compile Include="Migrations\202302132047036_UpdateLogs.designer.cs">
+      <DependentUpon>202302132047036_UpdateLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302132104575_EditUserData.cs" />
+    <Compile Include="Migrations\202302132104575_EditUserData.designer.cs">
+      <DependentUpon>202302132104575_EditUserData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302140000488_UpdateTransactionEntityData.cs" />
+    <Compile Include="Migrations\202302140000488_UpdateTransactionEntityData.designer.cs">
+      <DependentUpon>202302140000488_UpdateTransactionEntityData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302140009593_UpdateTransactionDateTime.cs" />
+    <Compile Include="Migrations\202302140009593_UpdateTransactionDateTime.designer.cs">
+      <DependentUpon>202302140009593_UpdateTransactionDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302140117180_UpdateTransactionEntityData2.cs" />
+    <Compile Include="Migrations\202302140117180_UpdateTransactionEntityData2.designer.cs">
+      <DependentUpon>202302140117180_UpdateTransactionEntityData2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302142114518_UpdateHashedPassword.cs" />
+    <Compile Include="Migrations\202302142114518_UpdateHashedPassword.designer.cs">
+      <DependentUpon>202302142114518_UpdateHashedPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302142149314_UpdateJournalTypeAndView.cs" />
+    <Compile Include="Migrations\202302142149314_UpdateJournalTypeAndView.designer.cs">
+      <DependentUpon>202302142149314_UpdateJournalTypeAndView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302142226093_UpdateJournalTypes.cs" />
+    <Compile Include="Migrations\202302142226093_UpdateJournalTypes.designer.cs">
+      <DependentUpon>202302142226093_UpdateJournalTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Controls\LogInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\LogInfoControl.Designer.cs">
+      <DependentUpon>LogInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\LookUpEditors\AccountGridLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\LookUpEditors\AccountTypeGridLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\LookUpEditors\CurrencyGridLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\LookUpEditors\JournalTypeGridLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Core\Dialogs\SystemStyleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Core\Dialogs\SystemStyleDialog.Designer.cs">
+      <DependentUpon>SystemStyleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Core\Forms\UserControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Core\Forms\UserControlForm.Designer.cs">
+      <DependentUpon>UserControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Core\Dialogs\ExceptionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Core\Dialogs\ExceptionDialog.Designer.cs">
+      <DependentUpon>ExceptionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\AccountTypeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\AccountTypeView.Designer.cs">
+      <DependentUpon>AccountTypeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\AccountTypeCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\AccountTypeCollectionView.Designer.cs">
+      <DependentUpon>AccountTypeCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\AccountView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\AccountView.Designer.cs">
+      <DependentUpon>AccountView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\CurrencyView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\CurrencyView.Designer.cs">
+      <DependentUpon>CurrencyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\CurrencyCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\CurrencyCollectionView.Designer.cs">
+      <DependentUpon>CurrencyCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\AccountCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\AccountCollectionView.Designer.cs">
+      <DependentUpon>AccountCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\JournalTypeCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\JournalTypeCollectionView.Designer.cs">
+      <DependentUpon>JournalTypeCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\JournalTypeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\JournalTypeView.Designer.cs">
+      <DependentUpon>JournalTypeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\JournalView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\JournalView.Designer.cs">
+      <DependentUpon>JournalView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\JournalCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Financial\JournalCollectionView.Designer.cs">
+      <DependentUpon>JournalCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\GeneralSettings\UserView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\GeneralSettings\UserView.Designer.cs">
+      <DependentUpon>UserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\GeneralSettings\UserCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\GeneralSettings\UserCollectionView.Designer.cs">
+      <DependentUpon>UserCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302130017353_InitDatabase.resx">
+      <DependentUpon>202302130017353_InitDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302131740273_addPermissionsTables.resx">
+      <DependentUpon>202302131740273_addPermissionsTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302131800187_EditUserViewTable.resx">
+      <DependentUpon>202302131800187_EditUserViewTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302131924301_EditUsersTable.resx">
+      <DependentUpon>202302131924301_EditUsersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302131929369_EditUsersTable2.resx">
+      <DependentUpon>202302131929369_EditUsersTable2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302131935405_EditUsersTableAddEnabledProperty.resx">
+      <DependentUpon>202302131935405_EditUsersTableAddEnabledProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302132047036_UpdateLogs.resx">
+      <DependentUpon>202302132047036_UpdateLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302132104575_EditUserData.resx">
+      <DependentUpon>202302132104575_EditUserData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302140000488_UpdateTransactionEntityData.resx">
+      <DependentUpon>202302140000488_UpdateTransactionEntityData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302140009593_UpdateTransactionDateTime.resx">
+      <DependentUpon>202302140009593_UpdateTransactionDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302140117180_UpdateTransactionEntityData2.resx">
+      <DependentUpon>202302140117180_UpdateTransactionEntityData2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302142114518_UpdateHashedPassword.resx">
+      <DependentUpon>202302142114518_UpdateHashedPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302142149314_UpdateJournalTypeAndView.resx">
+      <DependentUpon>202302142149314_UpdateJournalTypeAndView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302142226093_UpdateJournalTypes.resx">
+      <DependentUpon>202302142226093_UpdateJournalTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\Controls\LogInfoControl.resx">
+      <DependentUpon>LogInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Core\Dialogs\SystemStyleDialog.resx">
+      <DependentUpon>SystemStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Core\Forms\UserControlForm.resx">
+      <DependentUpon>UserControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Core\Dialogs\ExceptionDialog.resx">
+      <DependentUpon>ExceptionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Financial\AccountCollectionView.resx">
+      <DependentUpon>AccountCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Financial\AccountTypeCollectionView.resx">
+      <DependentUpon>AccountTypeCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Financial\AccountTypeView.resx">
+      <DependentUpon>AccountTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Financial\AccountView.resx">
+      <DependentUpon>AccountView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Financial\CurrencyCollectionView.resx">
+      <DependentUpon>CurrencyCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Financial\CurrencyView.resx">
+      <DependentUpon>CurrencyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Financial\JournalCollectionView.resx">
+      <DependentUpon>JournalCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Financial\JournalTypeCollectionView.resx">
+      <DependentUpon>JournalTypeCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Financial\JournalTypeView.resx">
+      <DependentUpon>JournalTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Financial\JournalView.resx">
+      <DependentUpon>JournalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\GeneralSettings\UserCollectionView.resx">
+      <DependentUpon>UserCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\GeneralSettings\UserView.resx">
+      <DependentUpon>UserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Ebda3Soft.Core.Database.Entities.Financial.Account.datasource" />
+    <None Include="Properties\DataSources\Ebda3Soft.Core.Database.Entities.Financial.Currency.datasource" />
+    <None Include="Properties\DataSources\Ebda3Soft.Core.Database.Entities.GeneralSettings.TransactionLog.datasource" />
+    <None Include="Properties\DataSources\Ebda3Soft.Core.Database.Entities.GeneralSettings.User.datasource" />
+    <None Include="Properties\DataSources\Ebda3Soft.Core.Database.Entities.GeneralSettings.UserViewInfo.datasource" />
+    <None Include="Properties\DataSources\Ebda3Soft.Core.Models.TransactionLogInfo.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itemtypestandard.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security_key.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_user.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allowuserstoeditranges.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\highimportance.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printcurrentpage.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\financial.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\initialstate.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewsettings.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fieldsettingspivottable.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security_visibility.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_invoice.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indentdecrease.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indentincrease.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changefontstyle.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\language.svg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
