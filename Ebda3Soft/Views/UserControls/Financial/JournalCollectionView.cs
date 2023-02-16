@@ -20,9 +20,17 @@ namespace Ebda3Soft.Views.UserControls.Financial
     public partial class JournalCollectionView : DevExpress.XtraEditors.XtraUserControl
     {
         SQLServerDbContext dbContext;
-        private readonly Ebda3Soft.Core.Enums.JournalView journalView;
+        private readonly Ebda3Soft.Core.Enums.JournalFormView? journalView;
 
-        public JournalCollectionView(Ebda3Soft.Core.Enums.JournalView journalView)
+        public JournalCollectionView()
+        {
+            InitializeComponent();
+
+            dbContext = SQLServerDbContext.Instance;
+            TasksPage.Enabled = false;
+            RefreshData();
+        }
+        public JournalCollectionView(Ebda3Soft.Core.Enums.JournalFormView journalView)
         {
             InitializeComponent();
 
@@ -52,7 +60,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
         public void New()
         {
 
-            SharedView.ShowUserControlForm(new JournalView(bindingSource, Ebda3Soft.Core.Enums.TransactionType.Adding,journalView));
+            SharedView.ShowUserControlForm(new JournalView(bindingSource, Ebda3Soft.Core.Enums.TransactionType.Adding,journalView.Value));
         }
 
         public void Delete()
@@ -69,12 +77,12 @@ namespace Ebda3Soft.Views.UserControls.Financial
 
         public bool IsReadyToEdit()
         {
-            return gridView.GetFocusedRow() != null;
+            return gridView.GetFocusedRow() != null && TasksPage.Enabled == true;
         }
         public void Edit()
         {
             if (IsReadyToEdit())
-                SharedView.ShowUserControlForm(new JournalView(bindingSource, Ebda3Soft.Core.Enums.TransactionType.Modifying,journalView));
+                SharedView.ShowUserControlForm(new JournalView(bindingSource, Ebda3Soft.Core.Enums.TransactionType.Modifying,journalView.Value));
         }
 
         private void UserControlLoaded(object sender, EventArgs e)
@@ -101,7 +109,11 @@ namespace Ebda3Soft.Views.UserControls.Financial
                 dbContext.JournalTypes.Load();
                 dbContext.Accounts.Load();
                 dbContext.Currencies.Load();
-                Func<Journal, bool> predicate = a => a.JournalType.JournalForm == journalView;
+                Func<Journal, bool> predicate = a=> true;
+                if (journalView != null)
+                {
+                    predicate= a => a.JournalType.JournalForm == journalView;
+                }
 
                 bindingSource.DataSource = dbContext.Journals.Where(predicate).ToList();
 

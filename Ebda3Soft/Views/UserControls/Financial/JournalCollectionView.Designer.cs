@@ -36,8 +36,6 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.colJournalType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colJournalNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colJournalDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCreditAccount = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDebitAccount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCurrency = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsPosted = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,7 +48,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.TasksPage = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
@@ -83,8 +81,6 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.colJournalType,
             this.colJournalNumber,
             this.colJournalDate,
-            this.colCreditAccount,
-            this.colDebitAccount,
             this.colDescription,
             this.colCurrency,
             this.colIsPosted,
@@ -115,47 +111,33 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.colJournalDate.Visible = true;
             this.colJournalDate.VisibleIndex = 2;
             // 
-            // colCreditAccount
-            // 
-            this.colCreditAccount.FieldName = "CreditAccount";
-            this.colCreditAccount.Name = "colCreditAccount";
-            this.colCreditAccount.Visible = true;
-            this.colCreditAccount.VisibleIndex = 3;
-            // 
-            // colDebitAccount
-            // 
-            this.colDebitAccount.FieldName = "DebitAccount";
-            this.colDebitAccount.Name = "colDebitAccount";
-            this.colDebitAccount.Visible = true;
-            this.colDebitAccount.VisibleIndex = 4;
-            // 
             // colDescription
             // 
             this.colDescription.FieldName = "Description";
             this.colDescription.Name = "colDescription";
             this.colDescription.Visible = true;
-            this.colDescription.VisibleIndex = 7;
+            this.colDescription.VisibleIndex = 3;
             // 
             // colCurrency
             // 
             this.colCurrency.FieldName = "Currency";
             this.colCurrency.Name = "colCurrency";
             this.colCurrency.Visible = true;
-            this.colCurrency.VisibleIndex = 8;
+            this.colCurrency.VisibleIndex = 4;
             // 
             // colIsPosted
             // 
             this.colIsPosted.FieldName = "IsPosted";
             this.colIsPosted.Name = "colIsPosted";
             this.colIsPosted.Visible = true;
-            this.colIsPosted.VisibleIndex = 9;
+            this.colIsPosted.VisibleIndex = 5;
             // 
             // colJournalPrice
             // 
             this.colJournalPrice.FieldName = "JournalPrice";
             this.colJournalPrice.Name = "colJournalPrice";
             this.colJournalPrice.Visible = true;
-            this.colJournalPrice.VisibleIndex = 10;
+            this.colJournalPrice.VisibleIndex = 6;
             // 
             // ribbonControl
             // 
@@ -225,22 +207,22 @@ namespace Ebda3Soft.Views.UserControls.Financial
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
+            this.TasksPage,
             this.ribbonPageGroup2});
             this.ribbonPage1.MergeOrder = 0;
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Home";
             // 
-            // ribbonPageGroup1
+            // TasksPage
             // 
-            this.ribbonPageGroup1.AllowTextClipping = false;
-            this.ribbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiNew);
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiEdit);
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiDelete);
-            this.ribbonPageGroup1.ItemLinks.Add(this.bbiRefresh);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Tasks";
+            this.TasksPage.AllowTextClipping = false;
+            this.TasksPage.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.TasksPage.ItemLinks.Add(this.bbiNew);
+            this.TasksPage.ItemLinks.Add(this.bbiEdit);
+            this.TasksPage.ItemLinks.Add(this.bbiDelete);
+            this.TasksPage.ItemLinks.Add(this.bbiRefresh);
+            this.TasksPage.Name = "TasksPage";
+            this.TasksPage.Text = "Tasks";
             // 
             // ribbonPageGroup2
             // 
@@ -282,7 +264,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
         private DevExpress.XtraGrid.Views.Grid.GridView gridView;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup TasksPage;
         private DevExpress.XtraBars.BarButtonItem bbiPrintPreview;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
@@ -295,8 +277,6 @@ namespace Ebda3Soft.Views.UserControls.Financial
         private DevExpress.XtraGrid.Columns.GridColumn colJournalType;
         private DevExpress.XtraGrid.Columns.GridColumn colJournalNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colJournalDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colCreditAccount;
-        private DevExpress.XtraGrid.Columns.GridColumn colDebitAccount;
         private DevExpress.XtraGrid.Columns.GridColumn colDescription;
         private DevExpress.XtraGrid.Columns.GridColumn colCurrency;
         private DevExpress.XtraGrid.Columns.GridColumn colIsPosted;

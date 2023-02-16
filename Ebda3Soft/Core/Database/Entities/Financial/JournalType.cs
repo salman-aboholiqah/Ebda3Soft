@@ -13,7 +13,7 @@ namespace Ebda3Soft.Core.Database.Entities.Financial
         [Required]
         public string JournalTypeName { get; set; }
         [Required]
-        public JournalView JournalForm { get; set; }
+        public JournalFormView JournalForm { get; set; }
 
 
         public virtual ICollection<Journal> Journals { get; set; }

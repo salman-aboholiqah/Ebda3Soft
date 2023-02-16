@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ebda3Soft.Core.Enums
 {
-    public enum JournalView
+    public enum JournalDetailDirection
     {
-        SimpleJournal,
-        Recetip,
-        Payment,
-        Sales,
-        Purchase,
+        Debit,
+        Credit
     }
 }

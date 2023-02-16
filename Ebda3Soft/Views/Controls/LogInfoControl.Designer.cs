@@ -29,7 +29,7 @@ namespace Ebda3Soft.Views.Controls
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogInfoControl));
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.txtEdits = new DevExpress.XtraEditors.TextEdit();
             this.PrintsTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -73,6 +73,7 @@ namespace Ebda3Soft.Views.Controls
             // 
             // dataLayoutControl1
             // 
+            resources.ApplyResources(this.dataLayoutControl1, "dataLayoutControl1");
             this.dataLayoutControl1.Controls.Add(this.txtEdits);
             this.dataLayoutControl1.Controls.Add(this.PrintsTextEdit);
             this.dataLayoutControl1.Controls.Add(this.txtAddedBy);
@@ -81,101 +82,81 @@ namespace Ebda3Soft.Views.Controls
             this.dataLayoutControl1.Controls.Add(this.txtLastPrint);
             this.dataLayoutControl1.Controls.Add(this.txtLastEditBy);
             this.dataLayoutControl1.Controls.Add(this.txtLastPrintBy);
-            this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.OptionsView.RightToLeftMirroringApplied = true;
             this.dataLayoutControl1.Root = this.Root;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(597, 48);
-            this.dataLayoutControl1.TabIndex = 1;
-            this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
             // txtEdits
             // 
-            this.txtEdits.Location = new System.Drawing.Point(360, 2);
+            resources.ApplyResources(this.txtEdits, "txtEdits");
             this.txtEdits.Name = "txtEdits";
             this.txtEdits.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.txtEdits.Properties.Appearance.Options.UseTextOptions = true;
             this.txtEdits.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtEdits.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtEdits.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtEdits.Properties.Mask.UseMaskAsDisplayFormat")));
             this.txtEdits.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtEdits.Properties.MaskSettings.Set("mask", "N0");
             this.txtEdits.Properties.ReadOnly = true;
-            this.txtEdits.Size = new System.Drawing.Size(85, 20);
             this.txtEdits.StyleController = this.dataLayoutControl1;
-            this.txtEdits.TabIndex = 4;
             // 
             // PrintsTextEdit
             // 
-            this.PrintsTextEdit.Location = new System.Drawing.Point(509, 2);
+            resources.ApplyResources(this.PrintsTextEdit, "PrintsTextEdit");
             this.PrintsTextEdit.Name = "PrintsTextEdit";
             this.PrintsTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.PrintsTextEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.PrintsTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.PrintsTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.PrintsTextEdit.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("PrintsTextEdit.Properties.Mask.UseMaskAsDisplayFormat")));
             this.PrintsTextEdit.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.PrintsTextEdit.Properties.MaskSettings.Set("mask", "N0");
             this.PrintsTextEdit.Properties.ReadOnly = true;
-            this.PrintsTextEdit.Size = new System.Drawing.Size(86, 20);
             this.PrintsTextEdit.StyleController = this.dataLayoutControl1;
-            this.PrintsTextEdit.TabIndex = 5;
             // 
             // txtAddedBy
             // 
-            this.txtAddedBy.Location = new System.Drawing.Point(62, 2);
+            resources.ApplyResources(this.txtAddedBy, "txtAddedBy");
             this.txtAddedBy.Name = "txtAddedBy";
             this.txtAddedBy.Properties.ReadOnly = true;
-            this.txtAddedBy.Size = new System.Drawing.Size(85, 20);
             this.txtAddedBy.StyleController = this.dataLayoutControl1;
-            this.txtAddedBy.TabIndex = 6;
             // 
             // txtAddDate
             // 
-            this.txtAddDate.Location = new System.Drawing.Point(211, 2);
+            resources.ApplyResources(this.txtAddDate, "txtAddDate");
             this.txtAddDate.Name = "txtAddDate";
             this.txtAddDate.Properties.ReadOnly = true;
-            this.txtAddDate.Size = new System.Drawing.Size(85, 20);
             this.txtAddDate.StyleController = this.dataLayoutControl1;
-            this.txtAddDate.TabIndex = 7;
             // 
             // txtLastEdit
             // 
-            this.txtLastEdit.Location = new System.Drawing.Point(211, 26);
+            resources.ApplyResources(this.txtLastEdit, "txtLastEdit");
             this.txtLastEdit.Name = "txtLastEdit";
             this.txtLastEdit.Properties.ReadOnly = true;
-            this.txtLastEdit.Size = new System.Drawing.Size(85, 20);
             this.txtLastEdit.StyleController = this.dataLayoutControl1;
-            this.txtLastEdit.TabIndex = 8;
             // 
             // txtLastPrint
             // 
-            this.txtLastPrint.Location = new System.Drawing.Point(509, 26);
+            resources.ApplyResources(this.txtLastPrint, "txtLastPrint");
             this.txtLastPrint.Name = "txtLastPrint";
             this.txtLastPrint.Properties.ReadOnly = true;
-            this.txtLastPrint.Size = new System.Drawing.Size(86, 20);
             this.txtLastPrint.StyleController = this.dataLayoutControl1;
-            this.txtLastPrint.TabIndex = 9;
             // 
             // txtLastEditBy
             // 
-            this.txtLastEditBy.Location = new System.Drawing.Point(62, 26);
+            resources.ApplyResources(this.txtLastEditBy, "txtLastEditBy");
             this.txtLastEditBy.Name = "txtLastEditBy";
             this.txtLastEditBy.Properties.ReadOnly = true;
-            this.txtLastEditBy.Size = new System.Drawing.Size(85, 20);
             this.txtLastEditBy.StyleController = this.dataLayoutControl1;
-            this.txtLastEditBy.TabIndex = 10;
             // 
             // txtLastPrintBy
             // 
-            this.txtLastPrintBy.Location = new System.Drawing.Point(360, 26);
+            resources.ApplyResources(this.txtLastPrintBy, "txtLastPrintBy");
             this.txtLastPrintBy.Name = "txtLastPrintBy";
             this.txtLastPrintBy.Properties.ReadOnly = true;
-            this.txtLastPrintBy.Size = new System.Drawing.Size(85, 20);
             this.txtLastPrintBy.StyleController = this.dataLayoutControl1;
-            this.txtLastPrintBy.TabIndex = 11;
             // 
             // Root
             // 
+            resources.ApplyResources(this.Root, "Root");
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -187,6 +168,7 @@ namespace Ebda3Soft.Views.Controls
             // 
             // layoutControlGroup1
             // 
+            resources.ApplyResources(this.layoutControlGroup1, "layoutControlGroup1");
             this.layoutControlGroup1.AllowDrawBackground = false;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -204,83 +186,82 @@ namespace Ebda3Soft.Views.Controls
             // 
             // layoutControlItem1
             // 
+            resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
             this.layoutControlItem1.Control = this.txtAddedBy;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(149, 24);
-            this.layoutControlItem1.Text = "Added By";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(48, 13);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(63, 13);
             // 
             // ItemForPrints
             // 
+            resources.ApplyResources(this.ItemForPrints, "ItemForPrints");
             this.ItemForPrints.Control = this.PrintsTextEdit;
             this.ItemForPrints.Location = new System.Drawing.Point(447, 0);
             this.ItemForPrints.Name = "ItemForPrints";
             this.ItemForPrints.Size = new System.Drawing.Size(150, 24);
-            this.ItemForPrints.Text = "Prints";
-            this.ItemForPrints.TextSize = new System.Drawing.Size(48, 13);
+            this.ItemForPrints.TextSize = new System.Drawing.Size(63, 13);
             // 
             // ItemForUpdates
             // 
+            resources.ApplyResources(this.ItemForUpdates, "ItemForUpdates");
             this.ItemForUpdates.Control = this.txtEdits;
             this.ItemForUpdates.Location = new System.Drawing.Point(298, 0);
             this.ItemForUpdates.Name = "ItemForUpdates";
             this.ItemForUpdates.Size = new System.Drawing.Size(149, 24);
-            this.ItemForUpdates.Text = "Edits";
-            this.ItemForUpdates.TextSize = new System.Drawing.Size(48, 13);
+            this.ItemForUpdates.TextSize = new System.Drawing.Size(63, 13);
             // 
             // layoutControlItem2
             // 
+            resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
             this.layoutControlItem2.Control = this.txtAddDate;
             this.layoutControlItem2.Location = new System.Drawing.Point(149, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(149, 24);
-            this.layoutControlItem2.Text = "DateTime";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(48, 13);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(63, 13);
             // 
             // layoutControlItem5
             // 
+            resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
             this.layoutControlItem5.Control = this.txtLastEditBy;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(149, 24);
-            this.layoutControlItem5.Text = "Last Edit";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(48, 13);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(63, 13);
             // 
             // layoutControlItem6
             // 
+            resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
             this.layoutControlItem6.Control = this.txtLastPrintBy;
             this.layoutControlItem6.Location = new System.Drawing.Point(298, 24);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(149, 24);
-            this.layoutControlItem6.Text = "Last Print";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(48, 13);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(63, 13);
             // 
             // txt
             // 
+            resources.ApplyResources(this.txt, "txt");
             this.txt.Control = this.txtLastPrint;
             this.txt.Location = new System.Drawing.Point(447, 24);
             this.txt.Name = "txt";
             this.txt.Size = new System.Drawing.Size(150, 24);
-            this.txt.Text = "Print Date";
-            this.txt.TextSize = new System.Drawing.Size(48, 13);
+            this.txt.TextSize = new System.Drawing.Size(63, 13);
             // 
             // layoutControlItem3
             // 
+            resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
             this.layoutControlItem3.Control = this.txtLastEdit;
             this.layoutControlItem3.Location = new System.Drawing.Point(149, 24);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(149, 24);
-            this.layoutControlItem3.Text = "Edit Date";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(48, 13);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(63, 13);
             // 
             // LogInfoControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataLayoutControl1);
             this.Name = "LogInfoControl";
-            this.Size = new System.Drawing.Size(597, 48);
             this.Load += new System.EventHandler(this.TransactionLogInfoControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);

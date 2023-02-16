@@ -1,3 +1,4 @@
+[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E1746)
 # Ebda3Soft
 ## Requirements
 ##### Devexpress: https://dl3.downloadly.ir/Files/Software/DevExpress_v21.1.3.0_Downloadly.ir.rar

@@ -20,7 +20,19 @@ namespace Ebda3Soft.Views.UserControls
     {
         public LoginForm()
         {
+
             InitializeComponent();
+            LanguageComboBox.Text = Properties.Settings.Default.Lanuage;
+            string selectedLange = Properties.Settings.Default.Lanuage;
+            if (selectedLange == "Arabic")
+            {
+
+                RightToLeft
+                  = RightToLeft.Yes;
+                RightToLeftLayout = true;
+
+            }
+
         }
 
 
@@ -42,8 +54,17 @@ namespace Ebda3Soft.Views.UserControls
                 FlyoutDialog.Show(this, "Error", "This user has been disabled!", MessageBoxButtons.OK);
                 return;
             }
+
             SharedView.User = user;
             DialogResult = DialogResult.OK;
+            var locale = "en";
+            if (LanguageComboBox.Text == "Arabic")
+                locale = "ar";
+
+            Properties.Settings.Default.Lanuage = LanguageComboBox.Text;
+            var culture = System.Globalization.CultureInfo.CreateSpecificCulture(locale);
+            System.Threading.Thread.CurrentThread.CurrentCulture = culture;
+            System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
 
 
         }

@@ -1,5 +1,6 @@
 ﻿using Ebda3Soft.Core.CustomAttributes;
 using Ebda3Soft.Core.Database.Interfaces;
+using Ebda3Soft.Lang;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,7 +17,7 @@ namespace Ebda3Soft.Core.Database.Entities.Financial
     public class AccountType : BaseEntity
     {
         public Guid AccountTypeID { get; set; } = Guid.NewGuid();
-        [Required,StringLength(300),Index(IsUnique =true)]
+        [Required,StringLength(300),Index(IsUnique =true), LocalizableDisplayName(typeof(Languages), "AccountTypeName")]
         public String TypeName { get; set; }
 
         

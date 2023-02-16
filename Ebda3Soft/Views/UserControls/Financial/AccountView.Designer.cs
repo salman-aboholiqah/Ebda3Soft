@@ -30,11 +30,11 @@ namespace Ebda3Soft.Views.UserControls.Financial
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.logInfoControl1 = new Ebda3Soft.Views.Controls.LogInfoControl();
             this.currencyGridLookUpEdit1 = new Ebda3Soft.Views.Controls.LookUpEditors.CurrencyGridLookUpEdit();
@@ -101,16 +101,16 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.Root;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(552, 320);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(596, 285);
             this.dataLayoutControl1.TabIndex = 0;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
             // logInfoControl1
             // 
-            this.logInfoControl1.Location = new System.Drawing.Point(12, 260);
+            this.logInfoControl1.Location = new System.Drawing.Point(12, 225);
             this.logInfoControl1.Name = "logInfoControl1";
             this.logInfoControl1.ReferenceGuid = new System.Guid("00000000-0000-0000-0000-000000000000");
-            this.logInfoControl1.Size = new System.Drawing.Size(528, 48);
+            this.logInfoControl1.Size = new System.Drawing.Size(572, 48);
             this.logInfoControl1.TabIndex = 11;
             // 
             // currencyGridLookUpEdit1
@@ -119,10 +119,10 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.currencyGridLookUpEdit1.Name = "currencyGridLookUpEdit1";
             this.currencyGridLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "Add To Currencies List", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "Add To Currencies List", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.currencyGridLookUpEdit1.Properties.PopupView = this.currencyGridLookUpEdit1View;
             this.currencyGridLookUpEdit1.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.currencyGridLookUpEdit1_Properties_ButtonClick);
-            this.currencyGridLookUpEdit1.Size = new System.Drawing.Size(171, 20);
+            this.currencyGridLookUpEdit1.Size = new System.Drawing.Size(193, 20);
             this.currencyGridLookUpEdit1.StyleController = this.dataLayoutControl1;
             this.currencyGridLookUpEdit1.TabIndex = 10;
             // 
@@ -141,7 +141,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.accountTypeGridLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.accountTypeGridLookUpEdit1.Properties.PopupView = this.accountTypeGridLookUpEdit1View;
-            this.accountTypeGridLookUpEdit1.Size = new System.Drawing.Size(171, 20);
+            this.accountTypeGridLookUpEdit1.Size = new System.Drawing.Size(193, 20);
             this.accountTypeGridLookUpEdit1.StyleController = this.dataLayoutControl1;
             this.accountTypeGridLookUpEdit1.TabIndex = 9;
             // 
@@ -166,16 +166,16 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.AccountNumberTextEdit.Properties.Mask.EditMask = "N0";
             this.AccountNumberTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.AccountNumberTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.AccountNumberTextEdit.Size = new System.Drawing.Size(171, 20);
+            this.AccountNumberTextEdit.Size = new System.Drawing.Size(193, 20);
             this.AccountNumberTextEdit.StyleController = this.dataLayoutControl1;
             this.AccountNumberTextEdit.TabIndex = 4;
             // 
             // AccountNameTextEdit
             // 
             this.AccountNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "AccountName", true));
-            this.AccountNameTextEdit.Location = new System.Drawing.Point(369, 12);
+            this.AccountNameTextEdit.Location = new System.Drawing.Point(391, 12);
             this.AccountNameTextEdit.Name = "AccountNameTextEdit";
-            this.AccountNameTextEdit.Size = new System.Drawing.Size(171, 20);
+            this.AccountNameTextEdit.Size = new System.Drawing.Size(193, 20);
             this.AccountNameTextEdit.StyleController = this.dataLayoutControl1;
             this.AccountNameTextEdit.TabIndex = 5;
             // 
@@ -187,7 +187,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.CurrenciesGridControl.Name = "CurrenciesGridControl";
             this.CurrenciesGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCurrencyGridLookUpEdit1});
-            this.CurrenciesGridControl.Size = new System.Drawing.Size(528, 156);
+            this.CurrenciesGridControl.Size = new System.Drawing.Size(572, 121);
             this.CurrenciesGridControl.TabIndex = 7;
             this.CurrenciesGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -240,11 +240,11 @@ namespace Ebda3Soft.Views.UserControls.Financial
             // IsParentCheckEdit
             // 
             this.IsParentCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "IsParent", true));
-            this.IsParentCheckEdit.Location = new System.Drawing.Point(278, 36);
+            this.IsParentCheckEdit.Location = new System.Drawing.Point(300, 36);
             this.IsParentCheckEdit.Name = "IsParentCheckEdit";
             this.IsParentCheckEdit.Properties.Caption = "Is Parent";
             this.IsParentCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
-            this.IsParentCheckEdit.Size = new System.Drawing.Size(262, 20);
+            this.IsParentCheckEdit.Size = new System.Drawing.Size(284, 20);
             this.IsParentCheckEdit.StyleController = this.dataLayoutControl1;
             this.IsParentCheckEdit.TabIndex = 8;
             // 
@@ -255,7 +255,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(552, 320);
+            this.Root.Size = new System.Drawing.Size(596, 285);
             this.Root.TextVisible = false;
             // 
             // layoutControlGroup1
@@ -273,14 +273,14 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.layoutControlItem3});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(532, 300);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(576, 265);
             // 
             // ItemForAccountNumber
             // 
             this.ItemForAccountNumber.Control = this.AccountNumberTextEdit;
             this.ItemForAccountNumber.Location = new System.Drawing.Point(0, 0);
             this.ItemForAccountNumber.Name = "ItemForAccountNumber";
-            this.ItemForAccountNumber.Size = new System.Drawing.Size(266, 24);
+            this.ItemForAccountNumber.Size = new System.Drawing.Size(288, 24);
             this.ItemForAccountNumber.Text = "Account Number";
             this.ItemForAccountNumber.TextSize = new System.Drawing.Size(79, 13);
             // 
@@ -289,7 +289,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.ItemForCurrencies.Control = this.CurrenciesGridControl;
             this.ItemForCurrencies.Location = new System.Drawing.Point(0, 72);
             this.ItemForCurrencies.Name = "ItemForCurrencies";
-            this.ItemForCurrencies.Size = new System.Drawing.Size(532, 176);
+            this.ItemForCurrencies.Size = new System.Drawing.Size(576, 141);
             this.ItemForCurrencies.StartNewLine = true;
             this.ItemForCurrencies.Text = "Currencies";
             this.ItemForCurrencies.TextLocation = DevExpress.Utils.Locations.Top;
@@ -298,18 +298,18 @@ namespace Ebda3Soft.Views.UserControls.Financial
             // ItemForAccountName
             // 
             this.ItemForAccountName.Control = this.AccountNameTextEdit;
-            this.ItemForAccountName.Location = new System.Drawing.Point(266, 0);
+            this.ItemForAccountName.Location = new System.Drawing.Point(288, 0);
             this.ItemForAccountName.Name = "ItemForAccountName";
-            this.ItemForAccountName.Size = new System.Drawing.Size(266, 24);
+            this.ItemForAccountName.Size = new System.Drawing.Size(288, 24);
             this.ItemForAccountName.Text = "Account Name";
             this.ItemForAccountName.TextSize = new System.Drawing.Size(79, 13);
             // 
             // ItemForIsParent
             // 
             this.ItemForIsParent.Control = this.IsParentCheckEdit;
-            this.ItemForIsParent.Location = new System.Drawing.Point(266, 24);
+            this.ItemForIsParent.Location = new System.Drawing.Point(288, 24);
             this.ItemForIsParent.Name = "ItemForIsParent";
-            this.ItemForIsParent.Size = new System.Drawing.Size(266, 24);
+            this.ItemForIsParent.Size = new System.Drawing.Size(288, 24);
             this.ItemForIsParent.Text = "Is Parent";
             this.ItemForIsParent.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForIsParent.TextVisible = false;
@@ -319,7 +319,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.layoutControlItem1.Control = this.accountTypeGridLookUpEdit1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(266, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(288, 24);
             this.layoutControlItem1.Text = "Account Type";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(79, 13);
             // 
@@ -328,26 +328,26 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.layoutControlItem2.Control = this.currencyGridLookUpEdit1;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(266, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(288, 24);
             this.layoutControlItem2.Text = "Currency";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(79, 13);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(266, 48);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(288, 48);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(266, 24);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(288, 24);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.logInfoControl1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 248);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 213);
             this.layoutControlItem3.MaxSize = new System.Drawing.Size(0, 52);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(460, 52);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(532, 52);
+            this.layoutControlItem3.Size = new System.Drawing.Size(576, 52);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
@@ -358,7 +358,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataLayoutControl1);
             this.Name = "AccountView";
-            this.Size = new System.Drawing.Size(552, 320);
+            this.Size = new System.Drawing.Size(596, 285);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.currencyGridLookUpEdit1.Properties)).EndInit();

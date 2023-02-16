@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraBars.Docking2010.Customization;
 using Ebda3Soft.Core.Database.Interfaces;
+using Ebda3Soft.Core.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -21,32 +22,20 @@ namespace Ebda3Soft.Core.Database.Entities.Financial
         public JournalType JournalType { get; set; }
         public long JournalNumber { get; set; }
         public DateTime JournalDate { get; set; } = DateTime.Now;
-        [Display(Order = -1)]
-        public Guid CreditAccountID { get; set; }
-        [Display(Order = -1)]
-        public Guid DebitAccountID { get; set; }
 
-        [ForeignKey("CreditAccountID")]
-        public Account CreditAccount { get; set; }
-        [ForeignKey("DebitAccountID")]
-        public Account DebitAccount { get; set; }
-        public Decimal Credit { get; set; }
-        public Decimal Debit { get; set; }
         public String Description { get; set; }
         [Display(Order = -1)]
         public Guid CurrencyID { get; set; }
         [ForeignKey("CurrencyID")]
-        public Currency Currency { get; set; }
+        public virtual Currency Currency { get; set; }
 
         public bool IsPosted { get; set; }
-
-        [NotMapped]
         public Decimal JournalPrice
         {
-            get => (Credit + Debit) / 2;
-            set => Credit = Debit = value;
+            get;
+            set;
         }
-
+        public virtual ICollection<JournalDetail> JournalDetails { get; set; } = new List<JournalDetail> { new JournalDetail { Direction = JournalDetailDirection.Debit }, new JournalDetail { Direction = JournalDetailDirection.Credit } };
         public override string DisplayMember => JournalType?.JournalTypeName + Description;
 
         public override Guid KeyMember => JournalID;
@@ -66,14 +55,15 @@ namespace Ebda3Soft.Core.Database.Entities.Financial
                 FlyoutDialog.Show(this.ParentForm, "Error", "The number is recorded before", MessageBoxButtons.OK);
                 return false;
             }
-            if (CreditAccountID == DebitAccountID)
-            {
-                FlyoutDialog.Show(this.ParentForm, "Error", "this transaction cannot be for the same account", MessageBoxButtons.OK);
-                return false;
-            }
             if (string.IsNullOrWhiteSpace(Description))
             {
                 FlyoutDialog.Show(this.ParentForm, "Error", "You have to enter the description", MessageBoxButtons.OK);
+                return false;
+            }
+
+            if (JournalDetails.Count(a => a.AccountID == Guid.Empty)>0)
+            {
+                FlyoutDialog.Show(this.ParentForm, "Error", "You have to enter the the accounts", MessageBoxButtons.OK);
                 return false;
             }
             if (JournalPrice == 0)

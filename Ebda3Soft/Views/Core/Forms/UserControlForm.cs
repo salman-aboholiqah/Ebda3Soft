@@ -23,7 +23,17 @@ namespace Ebda3Soft.Views.Core.Dialogs
         public UserControlForm(XtraUserControl control)
         {
             InitializeComponent();
+            string selectedLange = Properties.Settings.Default.Lanuage;
+            if (selectedLange == "Arabic")
+            {
+
+                RightToLeft
+                  = RightToLeft.Yes;
+                RightToLeftLayout = true;
+
+            }
             this.control = control;
+            this.Size = new Size(control.Width, control.Height + mainRibbonControl.Height);
             control.Dock = System.Windows.Forms.DockStyle.Fill;
             Controls.Add(control);
         }

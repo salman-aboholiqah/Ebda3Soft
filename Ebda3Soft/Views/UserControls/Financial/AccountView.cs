@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraBars.Docking2010.Customization;
 using DevExpress.XtraEditors;
+using Ebda3Soft.Core;
 using Ebda3Soft.Core.Database;
 using Ebda3Soft.Core.Database.Entities.Financial;
 using Ebda3Soft.Core.Database.Interfaces;
@@ -64,7 +65,15 @@ namespace Ebda3Soft.Views.UserControls.Financial
                     //InitBaseEntity();
                 }
             }
+            else
+            {
+
+            }
+            
             dataLayoutControl1.DataSource = BaseEntity.BindingSource;
+
+            SharedView.SetTranslate(dataLayoutControl1);
+            SharedView.SetTranslate(IsParentCheckEdit);
 
             logInfoControl1.ReferenceGuid = (bindingSource.Current as Account)?.AccountID ?? Guid.Empty;
 
@@ -136,7 +145,6 @@ namespace Ebda3Soft.Views.UserControls.Financial
                         if (account != null)
                         {
                             account.Currencies.Remove(currency);
-                            this.CurrenciesGridControl.DataBindings.Clear();
                             this.CurrenciesGridControl.DataSource = account.Currencies.ToList();
                         }
                     }

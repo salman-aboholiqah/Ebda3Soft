@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.Utils.Extensions;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,7 +33,8 @@ namespace Ebda3Soft.Views.Core.Dialogs
                 }
                 NumberGroupComboBoxEdit.Properties.Items.Add(numbers);
             }
-            
+             CultureInfo.CurrentCulture.NumberFormat.NativeDigits.ForEach(a=> NumberGroupComboBoxEdit.Text += a);
+
         }
 
         private void fontEdit1_Properties_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -60,6 +62,7 @@ namespace Ebda3Soft.Views.Core.Dialogs
             WindowsFormsSettings.LoadApplicationSettings();
 
             Properties.Settings.Default.DefaultFont = font;
+            Properties.Settings.Default.NativeDigits = NumberGroupComboBoxEdit.Text;
             Properties.Settings.Default.Save();
         }
     }

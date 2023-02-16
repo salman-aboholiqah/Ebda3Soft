@@ -37,17 +37,42 @@
   <ItemGroup>
     <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v21.1" />
+    <Reference Include="DevExpress.Charts.v21.1.Core, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v21.1.Core, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dashboard.v21.1.Win, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.Desktop.v21.1" />
     <Reference Include="DevExpress.Data.v21.1" />
+    <Reference Include="DevExpress.DataAccess.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v21.1.UI, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Images.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Map.v21.1.Core, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v21.1.Core, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v21.1.Core, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v21.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v21.1.Core, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.TreeMap.v21.1.Core, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v21.1" />
+    <Reference Include="DevExpress.Utils.v21.1.UI, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v21.1" />
     <Reference Include="DevExpress.Sparkline.v21.1.Core" />
+    <Reference Include="DevExpress.XtraCharts.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.1.UI, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.1.Wizard, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v21.1" />
+    <Reference Include="DevExpress.XtraGauges.v21.1.Core, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v21.1.Presets, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v21.1.Win, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v21.1.UI, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -74,18 +99,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\CustomAttributes\IgnoreSerializationAttribute.cs" />
+    <Compile Include="Core\CustomAttributes\LocalizableDisplayNameAttribute.cs" />
     <Compile Include="Core\Database\BaseEntity.cs" />
     <Compile Include="Core\Database\Ebda3SoftDBInitializer.cs" />
     <Compile Include="Core\Database\Entities\Financial\Account.cs" />
     <Compile Include="Core\Database\Entities\Financial\AccountType.cs" />
     <Compile Include="Core\Database\Entities\Financial\Currency.cs" />
     <Compile Include="Core\Database\Entities\Financial\Journal.cs" />
+    <Compile Include="Core\Database\Entities\Financial\JournalDetail.cs" />
     <Compile Include="Core\Database\Entities\Financial\JournalType.cs" />
     <Compile Include="Core\Database\Entities\GeneralSettings\TransactionLog.cs" />
     <Compile Include="Core\Database\Entities\GeneralSettings\User.cs" />
     <Compile Include="Core\Database\Entities\GeneralSettings\UserViewInfo.cs" />
     <Compile Include="Core\Database\IEntityControl.cs" />
     <Compile Include="Core\Database\Interfaces\IClosable.cs" />
+    <Compile Include="Core\Enums\JournalDetailDirection.cs" />
     <Compile Include="Core\Models\UserViewInfoDefaultList.cs" />
     <Compile Include="Core\Models\ViewInfo.cs" />
     <Compile Include="Core\Database\Entities\Inventory\Item.cs" />
@@ -97,12 +125,22 @@
     <Compile Include="Core\Database\Interfaces\ISupportEntityActions.cs" />
     <Compile Include="Core\Database\SharedActions.cs" />
     <Compile Include="Core\Database\SQLServerDbContext.cs" />
-    <Compile Include="Core\Enums\JournalView.cs" />
+    <Compile Include="Core\Enums\JournalFormView.cs" />
     <Compile Include="Core\Enums\SystemInfo.cs" />
     <Compile Include="Core\Enums\TransactionType.cs" />
     <Compile Include="Core\Models\TransactionLogInfo.cs" />
     <Compile Include="Core\SharedFormat.cs" />
     <Compile Include="Core\SharedView.cs" />
+    <Compile Include="Lang\Languages.ar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Languages.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Lang\Languages.Designer.cs">
+      <DependentUpon>Languages.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="MainView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +203,10 @@
     <Compile Include="Migrations\202302142226093_UpdateJournalTypes.designer.cs">
       <DependentUpon>202302142226093_UpdateJournalTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302160043053_FixInventory.cs" />
+    <Compile Include="Migrations\202302160043053_FixInventory.designer.cs">
+      <DependentUpon>202302160043053_FixInventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -203,6 +245,12 @@
     </Compile>
     <Compile Include="Views\Core\Dialogs\ExceptionDialog.Designer.cs">
       <DependentUpon>ExceptionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\DashboardUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\DashboardUserControl.Designer.cs">
+      <DependentUpon>DashboardUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\Financial\AccountTypeView.cs">
       <SubType>UserControl</SubType>
@@ -276,12 +324,26 @@
     <Compile Include="Views\UserControls\GeneralSettings\UserCollectionView.Designer.cs">
       <DependentUpon>UserCollectionView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\UserControls\LoginForm.cs">
+    <Compile Include="Views\Core\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\UserControls\LoginForm.Designer.cs">
+    <Compile Include="Views\Core\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\Inventory\ItemView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Inventory\ItemView.Designer.cs">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Lang\Languages.ar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Languages.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lang\Languages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Languages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,6 +389,9 @@
     <EmbeddedResource Include="Migrations\202302142226093_UpdateJournalTypes.resx">
       <DependentUpon>202302142226093_UpdateJournalTypes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302160043053_FixInventory.resx">
+      <DependentUpon>202302160043053_FixInventory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -338,17 +403,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\Controls\LogInfoControl.ar.resx">
+      <DependentUpon>LogInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Controls\LogInfoControl.resx">
       <DependentUpon>LogInfoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Core\Dialogs\SystemStyleDialog.resx">
       <DependentUpon>SystemStyleDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Core\Forms\UserControlForm.ar.resx">
+      <DependentUpon>UserControlForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Core\Forms\UserControlForm.resx">
       <DependentUpon>UserControlForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Core\Dialogs\ExceptionDialog.resx">
       <DependentUpon>ExceptionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dashboard\DashboardUserControl.resx">
+      <DependentUpon>DashboardUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Financial\AccountCollectionView.resx">
       <DependentUpon>AccountCollectionView.cs</DependentUpon>
@@ -377,6 +451,9 @@
     <EmbeddedResource Include="Views\UserControls\Financial\JournalTypeView.resx">
       <DependentUpon>JournalTypeView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Financial\JournalView.ar.resx">
+      <DependentUpon>JournalView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Financial\JournalView.resx">
       <DependentUpon>JournalView.cs</DependentUpon>
     </EmbeddedResource>
@@ -386,8 +463,11 @@
     <EmbeddedResource Include="Views\UserControls\GeneralSettings\UserView.resx">
       <DependentUpon>UserView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\UserControls\LoginForm.resx">
+    <EmbeddedResource Include="Views\Core\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Inventory\ItemView.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -460,6 +540,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\language.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changeconnectortype.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_invoice1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printcurrentpage1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tilelabels.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shortdate.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_database.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tilelabels1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servermode.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowbearright.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

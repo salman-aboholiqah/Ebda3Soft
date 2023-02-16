@@ -1,4 +1,7 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraLayout;
+using Ebda3Soft.Core.CustomAttributes;
 using Ebda3Soft.Core.Database.Entities.Financial;
 using Ebda3Soft.Core.Database.Entities.GeneralSettings;
 using Ebda3Soft.Core.Database.Interfaces;
@@ -19,6 +22,42 @@ namespace Ebda3Soft.Core
 {
     public class SharedView
     {
+        public static void SetTranslate(BaseEdit item)
+        {
+            var translation = new LocalizableDisplayNameAttribute(item.Text.Replace(" ",""))?.DisplayName;
+            if (translation != null)
+            {
+                item.Text = translation;
+            }
+        }
+        public static void SetTranslate(DevExpress.XtraDataLayout.DataLayoutControl control)
+        {
+            foreach (BaseLayoutItem item in control.Items)
+            {
+                if (!item.Visible || !item.TextVisible)
+                    continue;
+
+                var layoutItem = item as LayoutControlItem;
+                if (layoutItem == null)
+                    continue;
+
+                string propertyName = layoutItem.Name.Replace("itemFor","");
+                
+                if (layoutItem.Control != null && layoutItem.Control.DataBindings.Count > 0)
+                {
+                    var bind = layoutItem.Control.DataBindings[0].BindingMemberInfo.BindingField;
+                    if (bind.EndsWith("ID"))
+                        bind = bind.Replace("ID", "Name");
+                    propertyName = bind;
+
+                }
+                var translation = new LocalizableDisplayNameAttribute(propertyName)?.DisplayName;
+                if (translation != null)
+                {
+                    layoutItem.Text = translation;
+                }
+            }
+        }
         private static List<ViewInfo> views = new List<ViewInfo>
         {
             new ViewInfo

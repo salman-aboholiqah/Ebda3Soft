@@ -5,5 +5,17 @@
     <Setting Name="DefaultFont" Type="System.Drawing.Font" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="SelectedSkin" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SelectedPallete" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Lanuage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Arabic</Value>
+    </Setting>
+    <Setting Name="NativeDigits" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

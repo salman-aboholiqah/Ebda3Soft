@@ -51,7 +51,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
                 }
             }
             dataLayoutControl1.DataSource = BaseEntity.BindingSource;
-            JournalFormImageComboBoxEdit.Properties.Items.AddEnum(typeof(Ebda3Soft.Core.Enums.JournalView));
+            JournalFormImageComboBoxEdit.Properties.Items.AddEnum(typeof(Ebda3Soft.Core.Enums.JournalFormView));
         }
         public void InitBaseEntity()
         {

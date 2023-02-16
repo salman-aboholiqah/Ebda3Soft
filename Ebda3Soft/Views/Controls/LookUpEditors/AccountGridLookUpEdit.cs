@@ -25,7 +25,7 @@ namespace Ebda3Soft.Views.Controls.LookUpEditors
         {
             RegisterAccountGridLookUpEdit();
         }
-
+        public bool AutoLoad { get; set; } = false;
         public const string CustomEditName = "AccountGridLookUpEdit";
 
         public RepositoryItemAccountGridLookUpEdit()
@@ -44,21 +44,31 @@ namespace Ebda3Soft.Views.Controls.LookUpEditors
             DisplayMember = nameof(IMemberable.DisplayMember);
             ValueMember = nameof(IMemberable.KeyMember);
             LoadData();
-            InitButtons();
             this.gridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView.OptionsFind.FindDelay = 500;
             this.gridView.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView.OptionsView.ColumnAutoWidth = false;
             this.gridView.OptionsView.ShowGroupPanel = false;
+
+            Properties.Buttons.Clear();
+            if (Properties.Buttons.Count < 1)
+            {
+                Properties.Buttons.Add(new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo));
+            }
+            if (Buttons.Count < 2)
+            {
+                Buttons.Add(new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK, "Make Default"));
+            }
+            if (Buttons.Count < 3)
+            {
+                Buttons.Add(new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "Clear Data"));
+            }
+            if (Buttons.Count < 4)
+            {
+                Buttons.Add(new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus,"New Data"));
+            }
         }
 
-        private void InitButtons()
-        {
-            Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo),
-            });
-        }
         protected override void OnLoaded()
         {
             base.OnLoaded();
@@ -72,7 +82,7 @@ namespace Ebda3Soft.Views.Controls.LookUpEditors
                         new DevExpress.XtraGrid.Columns.GridColumn{FieldName = nameof(Account.DisplayMember),Visible = true,VisibleIndex=1},
                         new DevExpress.XtraGrid.Columns.GridColumn{FieldName = nameof(Account.AccountType),Visible = true,VisibleIndex=1},
                             });
-                    
+
                 }
 
             }
@@ -81,16 +91,6 @@ namespace Ebda3Soft.Views.Controls.LookUpEditors
         private void LoadData()
         {
             DataSource = SQLServerDbContext.Instance.Accounts.ToList();
-            if (Buttons.Count(a => a.Kind == DevExpress.XtraEditors.Controls.ButtonPredefines.Plus) == 0)
-            {
-                Buttons.Add(new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus,"Add New"));
-
-            }
-            if (Buttons.Count(a => a.Kind == DevExpress.XtraEditors.Controls.ButtonPredefines.OK) == 0)
-            {
-                Buttons.Add(new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "Add New"));
-
-            }
 
         }
         public override string EditorTypeName => CustomEditName;
@@ -128,7 +128,7 @@ namespace Ebda3Soft.Views.Controls.LookUpEditors
 
         public AccountGridLookUpEdit()
         {
-            
+
         }
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]

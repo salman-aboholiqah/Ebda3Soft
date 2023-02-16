@@ -31,6 +31,7 @@ namespace Ebda3Soft.Views.UserControls
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.LanguageComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.LoginIDEditText = new DevExpress.XtraEditors.TextEdit();
             this.PasswordEditText = new DevExpress.XtraEditors.TextEdit();
             this.checkEdit11 = new DevExpress.XtraEditors.CheckEdit();
@@ -40,12 +41,12 @@ namespace Ebda3Soft.Views.UserControls
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.LanguageComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LanguageComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginIDEditText.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordEditText.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit11.Properties)).BeginInit();
@@ -54,10 +55,9 @@ namespace Ebda3Soft.Views.UserControls
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LanguageComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -76,6 +76,21 @@ namespace Ebda3Soft.Views.UserControls
             this.layoutControl1.Size = new System.Drawing.Size(500, 118);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // LanguageComboBox
+            // 
+            this.LanguageComboBox.EditValue = "English";
+            this.LanguageComboBox.Location = new System.Drawing.Point(126, 84);
+            this.LanguageComboBox.Name = "LanguageComboBox";
+            this.LanguageComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LanguageComboBox.Properties.Items.AddRange(new object[] {
+            "English",
+            "Arabic"});
+            this.LanguageComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.LanguageComboBox.Size = new System.Drawing.Size(112, 20);
+            this.LanguageComboBox.StyleController = this.layoutControl1;
+            this.LanguageComboBox.TabIndex = 9;
             // 
             // LoginIDEditText
             // 
@@ -180,6 +195,15 @@ namespace Ebda3Soft.Views.UserControls
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.LanguageComboBox;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(230, 26);
+            this.layoutControlItem6.Text = "Language";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(102, 13);
+            // 
             // pictureEdit1
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
@@ -204,30 +228,6 @@ namespace Ebda3Soft.Views.UserControls
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
-            // LanguageComboBox
-            // 
-            this.LanguageComboBox.EditValue = "English";
-            this.LanguageComboBox.Location = new System.Drawing.Point(126, 84);
-            this.LanguageComboBox.Name = "LanguageComboBox";
-            this.LanguageComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.LanguageComboBox.Properties.Items.AddRange(new object[] {
-            "English",
-            "Arabic"});
-            this.LanguageComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.LanguageComboBox.Size = new System.Drawing.Size(112, 20);
-            this.LanguageComboBox.StyleController = this.layoutControl1;
-            this.LanguageComboBox.TabIndex = 9;
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.LanguageComboBox;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 72);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(230, 26);
-            this.layoutControlItem6.Text = "Language";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(102, 13);
-            // 
             // LoginForm
             // 
             this.AcceptButton = this.LoginButton;
@@ -243,6 +243,7 @@ namespace Ebda3Soft.Views.UserControls
             this.Text = "Login Form";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LanguageComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginIDEditText.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordEditText.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit11.Properties)).EndInit();
@@ -251,10 +252,9 @@ namespace Ebda3Soft.Views.UserControls
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LanguageComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }

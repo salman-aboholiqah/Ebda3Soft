@@ -33,5 +33,53 @@ namespace Ebda3Soft.Properties {
                 this["DefaultFont"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SelectedSkin {
+            get {
+                return ((string)(this["SelectedSkin"]));
+            }
+            set {
+                this["SelectedSkin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SelectedPallete {
+            get {
+                return ((string)(this["SelectedPallete"]));
+            }
+            set {
+                this["SelectedPallete"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Arabic")]
+        public string Lanuage {
+            get {
+                return ((string)(this["Lanuage"]));
+            }
+            set {
+                this["Lanuage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string NativeDigits {
+            get {
+                return ((string)(this["NativeDigits"]));
+            }
+            set {
+                this["NativeDigits"] = value;
+            }
+        }
     }
 }
