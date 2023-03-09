@@ -23,6 +23,7 @@ namespace Ebda3Soft.Core.Database.Entities.Financial
         
         [XmlIgnore()]
         public virtual ICollection<Account> Accounts { get; set; }
+        [LocalizableDisplayName(typeof(Languages), nameof(IsCash))]
         public bool IsCash { get; set; }
 
         public override string DisplayMember => TypeName;

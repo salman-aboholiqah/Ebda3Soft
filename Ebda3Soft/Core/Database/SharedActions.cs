@@ -81,16 +81,11 @@ namespace Ebda3Soft.Core.Database
             }
             catch (DbUpdateException ex)
             {
-                if (ex.InnerException.HResult == -2146233087)
-                {
-                    FlyoutDialog.Show(parentForm, "Error", "Cannot Save Duplicated Values", MessageBoxButtons.OK);
-
-                }
-                else
-                {
+                
+                
                     FlyoutDialog.Show(parentForm, "Error", ex.Message, MessageBoxButtons.OK);
 
-                }
+                
             }
             catch (Exception ex)
             {

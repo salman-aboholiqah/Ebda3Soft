@@ -24,7 +24,6 @@ namespace Ebda3Soft.Core.Database.Entities.GeneralSettings
         [Display(Order = -1), Required(ErrorMessage = "You have to enter the password")]
         public string HashedPassword { get; set; }
 
-        private string oldHash;
         private string plainText;
         private string passwordConfirmation;
 

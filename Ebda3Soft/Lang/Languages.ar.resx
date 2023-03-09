@@ -123,11 +123,17 @@
   <data name="AccountNumber" xml:space="preserve">
     <value>رقم الحساب</value>
   </data>
+  <data name="Accounts" xml:space="preserve">
+    <value>الحسابات</value>
+  </data>
   <data name="AccountTypeName" xml:space="preserve">
     <value>نوع الحساب</value>
   </data>
   <data name="Cost" xml:space="preserve">
     <value>الكلفة</value>
+  </data>
+  <data name="CountOfDecimals" xml:space="preserve">
+    <value>عدد الخانات العشرية</value>
   </data>
   <data name="Credit" xml:space="preserve">
     <value>دائن</value>
@@ -135,11 +141,23 @@
   <data name="Currencies" xml:space="preserve">
     <value>العملات</value>
   </data>
+  <data name="Currency" xml:space="preserve">
+    <value>العملة</value>
+  </data>
   <data name="CurrencyName" xml:space="preserve">
     <value>العملة</value>
   </data>
   <data name="Debit" xml:space="preserve">
     <value>مدين</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>الرئيسية</value>
   </data>
   <data name="IsCash" xml:space="preserve">
     <value>نقدية</value>
@@ -159,6 +177,9 @@
   <data name="ItemNumber" xml:space="preserve">
     <value>رقم الصنف</value>
   </data>
+  <data name="Items" xml:space="preserve">
+    <value>الأصناف</value>
+  </data>
   <data name="ItemTypeName" xml:space="preserve">
     <value>نوع الصنف</value>
   </data>
@@ -168,8 +189,20 @@
   <data name="JournalViewForm" xml:space="preserve">
     <value>نافذة القيد</value>
   </data>
+  <data name="New" xml:space="preserve">
+    <value>جديد</value>
+  </data>
   <data name="Price" xml:space="preserve">
     <value>السعر</value>
+  </data>
+  <data name="PrintandExport" xml:space="preserve">
+    <value>طباعة وتصدير</value>
+  </data>
+  <data name="PrintPreview" xml:space="preserve">
+    <value>معاينة قبل الطباعة</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>تحديث</value>
   </data>
   <data name="ShortCut" xml:space="preserve">
     <value>إختصار</value>
@@ -177,8 +210,14 @@
   <data name="Sign" xml:space="preserve">
     <value>علامة</value>
   </data>
-  <data name="SubCurrency" xml:space="preserve">
+  <data name="SubCurrencyName" xml:space="preserve">
     <value>الفكة</value>
+  </data>
+  <data name="Tasks" xml:space="preserve">
+    <value>مهام</value>
+  </data>
+  <data name="TypeName" xml:space="preserve">
+    <value>نوع الحساب</value>
   </data>
   <data name="UnitName" xml:space="preserve">
     <value>اسم الوحدة</value>

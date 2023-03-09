@@ -58,7 +58,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.ItemForAccountName = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForIsParent = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForCurrency = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
@@ -82,7 +82,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
             ((System.ComponentModel.ISupportInitialize)(this.ItemForAccountName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIsParent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCurrency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
@@ -268,7 +268,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.ItemForAccountName,
             this.ItemForIsParent,
             this.layoutControlItem1,
-            this.layoutControlItem2,
+            this.ItemForCurrency,
             this.emptySpaceItem1,
             this.layoutControlItem3});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
@@ -323,14 +323,14 @@ namespace Ebda3Soft.Views.UserControls.Financial
             this.layoutControlItem1.Text = "Account Type";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(79, 13);
             // 
-            // layoutControlItem2
+            // ItemForCurrency
             // 
-            this.layoutControlItem2.Control = this.currencyGridLookUpEdit1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(288, 24);
-            this.layoutControlItem2.Text = "Currency";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(79, 13);
+            this.ItemForCurrency.Control = this.currencyGridLookUpEdit1;
+            this.ItemForCurrency.Location = new System.Drawing.Point(0, 48);
+            this.ItemForCurrency.Name = "ItemForCurrency";
+            this.ItemForCurrency.Size = new System.Drawing.Size(288, 24);
+            this.ItemForCurrency.Text = "Currency";
+            this.ItemForCurrency.TextSize = new System.Drawing.Size(79, 13);
             // 
             // emptySpaceItem1
             // 
@@ -380,7 +380,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
             ((System.ComponentModel.ISupportInitialize)(this.ItemForAccountName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIsParent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCurrency)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
@@ -410,7 +410,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
         private DevExpress.XtraGrid.Columns.GridColumn colCurrencyName;
         private Controls.LookUpEditors.CurrencyGridLookUpEdit currencyGridLookUpEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView currencyGridLookUpEdit1View;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForCurrency;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private Controls.LogInfoControl logInfoControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;

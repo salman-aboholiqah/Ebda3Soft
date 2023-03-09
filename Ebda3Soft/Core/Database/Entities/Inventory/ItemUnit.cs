@@ -1,6 +1,7 @@
 ﻿using Ebda3Soft.Core.CustomAttributes;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -14,14 +15,14 @@ namespace Ebda3Soft.Core.Database.Entities.Inventory
         [Display(Order = -1, AutoGenerateField = false)]
         public Guid ItemUnitID { get; set; } = Guid.NewGuid();
 
-        [Display(Order = -1, AutoGenerateField = false)]
+        [Display(Order = -1, AutoGenerateField = false),]
         public Guid UnitID { get; set; }
-        [ForeignKey("UnitID"), LocalizableDisplayName(typeof(Lang.Languages),"UnitName")]
+        [ForeignKey("UnitID"), LocalizableDisplayName(typeof(Lang.Languages), "UnitName")]
         public virtual Unit Unit { get; set; }
 
         [Display(Order = -1, AutoGenerateField = false)]
         public Guid ItemID { get; set; }
-        [ForeignKey("ItemID"), LocalizableDisplayName(typeof(Lang.Languages),"ItemName")]
+        [ForeignKey("ItemID"), LocalizableDisplayName(typeof(Lang.Languages), "ItemName")]
         public virtual Item Item { get; set; }
         [LocalizableDisplayName(typeof(Lang.Languages), "UnitQuantity")]
         public decimal UnitQuantity { get; set; }

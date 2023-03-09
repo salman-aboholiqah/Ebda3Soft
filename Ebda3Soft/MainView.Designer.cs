@@ -45,12 +45,17 @@ namespace Ebda3Soft
             this.bbiCultureSettings = new DevExpress.XtraBars.BarButtonItem();
             this.bbiSimpleJournal = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDashboard = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiUnits = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiItemTypes = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiItems = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -96,15 +101,19 @@ namespace Ebda3Soft
             this.bbiPayments,
             this.bbiCultureSettings,
             this.bbiSimpleJournal,
-            this.bbiDashboard});
+            this.bbiDashboard,
+            this.bbiUnits,
+            this.bbiItemTypes,
+            this.bbiItems});
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
-            this.ribbonControl1.MaxItemId = 15;
+            this.ribbonControl1.MaxItemId = 18;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl1.MiniToolbars.Add(this.ribbonMiniToolbar1);
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage4,
             this.ribbonPage1,
+            this.ribbonPage5,
             this.ribbonPage2,
             this.ribbonPage3});
             this.ribbonControl1.Merge += new DevExpress.XtraBars.Ribbon.RibbonMergeEventHandler(this.ribbonControl1_Merge);
@@ -209,6 +218,30 @@ namespace Ebda3Soft
             this.bbiDashboard.Name = "bbiDashboard";
             this.bbiDashboard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiDashboard_ItemClick);
             // 
+            // bbiUnits
+            // 
+            resources.ApplyResources(this.bbiUnits, "bbiUnits");
+            this.bbiUnits.Id = 15;
+            this.bbiUnits.ImageOptions.SvgImage = global::Ebda3Soft.Properties.Resources.rulervertical;
+            this.bbiUnits.Name = "bbiUnits";
+            this.bbiUnits.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiUnits_ItemClick);
+            // 
+            // bbiItemTypes
+            // 
+            resources.ApplyResources(this.bbiItemTypes, "bbiItemTypes");
+            this.bbiItemTypes.Id = 16;
+            this.bbiItemTypes.ImageOptions.SvgImage = global::Ebda3Soft.Properties.Resources.itemtypestandard1;
+            this.bbiItemTypes.Name = "bbiItemTypes";
+            this.bbiItemTypes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiItemTypes_ItemClick);
+            // 
+            // bbiItems
+            // 
+            resources.ApplyResources(this.bbiItems, "bbiItems");
+            this.bbiItems.Id = 17;
+            this.bbiItems.ImageOptions.SvgImage = global::Ebda3Soft.Properties.Resources.bo_product_group;
+            this.bbiItems.Name = "bbiItems";
+            this.bbiItems.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiItems_ItemClick);
+            // 
             // ribbonMiniToolbar1
             // 
             this.ribbonMiniToolbar1.ParentControl = this;
@@ -253,6 +286,23 @@ namespace Ebda3Soft
             this.ribbonPageGroup3.ItemLinks.Add(this.bbiPayments);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             resources.ApplyResources(this.ribbonPageGroup3, "ribbonPageGroup3");
+            // 
+            // ribbonPage5
+            // 
+            this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup7});
+            this.ribbonPage5.ImageOptions.SvgImage = global::Ebda3Soft.Properties.Resources.productquickshippments;
+            this.ribbonPage5.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.ribbonPage5.Name = "ribbonPage5";
+            resources.ApplyResources(this.ribbonPage5, "ribbonPage5");
+            // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.bbiUnits);
+            this.ribbonPageGroup7.ItemLinks.Add(this.bbiItemTypes);
+            this.ribbonPageGroup7.ItemLinks.Add(this.bbiItems);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            resources.ApplyResources(this.ribbonPageGroup7, "ribbonPageGroup7");
             // 
             // ribbonPage2
             // 
@@ -499,6 +549,11 @@ namespace Ebda3Soft
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraBars.BarStaticItem bsiServerName;
         private DevExpress.XtraBars.BarButtonItem bbiLogout;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.BarButtonItem bbiUnits;
+        private DevExpress.XtraBars.BarButtonItem bbiItemTypes;
+        private DevExpress.XtraBars.BarButtonItem bbiItems;
     }
 }
 

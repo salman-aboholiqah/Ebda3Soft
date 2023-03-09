@@ -33,7 +33,6 @@ namespace Ebda3Soft.Views.Core.Dialogs
 
             }
             this.control = control;
-            this.Size = new Size(control.Width, control.Height + mainRibbonControl.Height);
             control.Dock = System.Windows.Forms.DockStyle.Fill;
             Controls.Add(control);
         }
@@ -42,6 +41,7 @@ namespace Ebda3Soft.Views.Core.Dialogs
         {
             var entityControl = control as IEntityControl;
 
+            this.Size = new Size(control.Width, control.Height + mainRibbonControl.Height);
             if (entityControl != null)
             {
                 var entity = entityControl.BaseEntity;
@@ -53,6 +53,7 @@ namespace Ebda3Soft.Views.Core.Dialogs
                 bbiDelete.ItemClick += (s, ev) => entity.Delete();
                 bbiReset.ItemClick += (s, ev) => entity.ResetChanges();
             }
+
         }
 
         private void UserControlForm_FormClosing(object sender, FormClosingEventArgs e)

@@ -4,6 +4,7 @@ using Ebda3Soft.Core.Database.Interfaces;
 using Ebda3Soft.Core.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -27,13 +28,15 @@ namespace Ebda3Soft.Core.Database
         public BindingSource BindingSource;
         public Form ParentForm;
         public TransactionType TransactionType;
-        [NotMapped]
+        [NotMapped,Display(AutoGenerateField = false,Order =-1)]
         public Action CloseAction { get; set; }
-        [NotMapped]
+        [NotMapped, Display(AutoGenerateField = false, Order = -1)]
         public Func<bool> Validation { get; set; }
         public abstract string DisplayMember { get; }
+        [Display(AutoGenerateField = false,Order =-1)]
         public abstract Guid KeyMember { get; }
 
+        [Display(AutoGenerateField = false,Order =-1)]
         public BaseEntity CurrentEntity { get => BindingSource?.Current as BaseEntity ?? this; }
         public bool Save()
         {
@@ -42,11 +45,10 @@ namespace Ebda3Soft.Core.Database
                 return false;
             BindingSource.EndEdit();
 
-            var entity = BindingSource.Current;
-            if (SharedActions.Save(entity, TransactionType, ParentForm))
+            if (SharedActions.Save(CurrentEntity, TransactionType, ParentForm))
             {
                 TransactionType = TransactionType.Modifying;
-                EntitySaved?.Invoke(entity as BaseEntity);
+                EntitySaved?.Invoke(CurrentEntity);
                 return true;
             }
             else

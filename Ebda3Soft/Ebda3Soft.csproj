@@ -98,7 +98,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\CustomAttributes\IgnoreSerializationAttribute.cs" />
     <Compile Include="Core\CustomAttributes\LocalizableDisplayNameAttribute.cs" />
     <Compile Include="Core\Database\BaseEntity.cs" />
     <Compile Include="Core\Database\Ebda3SoftDBInitializer.cs" />
@@ -111,6 +110,8 @@
     <Compile Include="Core\Database\Entities\GeneralSettings\TransactionLog.cs" />
     <Compile Include="Core\Database\Entities\GeneralSettings\User.cs" />
     <Compile Include="Core\Database\Entities\GeneralSettings\UserViewInfo.cs" />
+    <Compile Include="Core\Database\Entities\Inventory\Invoice.cs" />
+    <Compile Include="Core\Database\Entities\Inventory\InvoiceItem.cs" />
     <Compile Include="Core\Database\IEntityControl.cs" />
     <Compile Include="Core\Database\Interfaces\IClosable.cs" />
     <Compile Include="Core\Enums\JournalDetailDirection.cs" />
@@ -147,65 +148,13 @@
     <Compile Include="MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202302130017353_InitDatabase.cs" />
-    <Compile Include="Migrations\202302130017353_InitDatabase.designer.cs">
-      <DependentUpon>202302130017353_InitDatabase.cs</DependentUpon>
+    <Compile Include="Migrations\202303081700404_dbMigration.cs" />
+    <Compile Include="Migrations\202303081700404_dbMigration.designer.cs">
+      <DependentUpon>202303081700404_dbMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202302131740273_addPermissionsTables.cs" />
-    <Compile Include="Migrations\202302131740273_addPermissionsTables.designer.cs">
-      <DependentUpon>202302131740273_addPermissionsTables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302131800187_EditUserViewTable.cs" />
-    <Compile Include="Migrations\202302131800187_EditUserViewTable.designer.cs">
-      <DependentUpon>202302131800187_EditUserViewTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302131924301_EditUsersTable.cs" />
-    <Compile Include="Migrations\202302131924301_EditUsersTable.designer.cs">
-      <DependentUpon>202302131924301_EditUsersTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302131929369_EditUsersTable2.cs" />
-    <Compile Include="Migrations\202302131929369_EditUsersTable2.designer.cs">
-      <DependentUpon>202302131929369_EditUsersTable2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302131935405_EditUsersTableAddEnabledProperty.cs" />
-    <Compile Include="Migrations\202302131935405_EditUsersTableAddEnabledProperty.designer.cs">
-      <DependentUpon>202302131935405_EditUsersTableAddEnabledProperty.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302132047036_UpdateLogs.cs" />
-    <Compile Include="Migrations\202302132047036_UpdateLogs.designer.cs">
-      <DependentUpon>202302132047036_UpdateLogs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302132104575_EditUserData.cs" />
-    <Compile Include="Migrations\202302132104575_EditUserData.designer.cs">
-      <DependentUpon>202302132104575_EditUserData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302140000488_UpdateTransactionEntityData.cs" />
-    <Compile Include="Migrations\202302140000488_UpdateTransactionEntityData.designer.cs">
-      <DependentUpon>202302140000488_UpdateTransactionEntityData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302140009593_UpdateTransactionDateTime.cs" />
-    <Compile Include="Migrations\202302140009593_UpdateTransactionDateTime.designer.cs">
-      <DependentUpon>202302140009593_UpdateTransactionDateTime.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302140117180_UpdateTransactionEntityData2.cs" />
-    <Compile Include="Migrations\202302140117180_UpdateTransactionEntityData2.designer.cs">
-      <DependentUpon>202302140117180_UpdateTransactionEntityData2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302142114518_UpdateHashedPassword.cs" />
-    <Compile Include="Migrations\202302142114518_UpdateHashedPassword.designer.cs">
-      <DependentUpon>202302142114518_UpdateHashedPassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302142149314_UpdateJournalTypeAndView.cs" />
-    <Compile Include="Migrations\202302142149314_UpdateJournalTypeAndView.designer.cs">
-      <DependentUpon>202302142149314_UpdateJournalTypeAndView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302142226093_UpdateJournalTypes.cs" />
-    <Compile Include="Migrations\202302142226093_UpdateJournalTypes.designer.cs">
-      <DependentUpon>202302142226093_UpdateJournalTypes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302160043053_FixInventory.cs" />
-    <Compile Include="Migrations\202302160043053_FixInventory.designer.cs">
-      <DependentUpon>202302160043053_FixInventory.cs</DependentUpon>
+    <Compile Include="Migrations\202303081718449_dbMigration1.cs" />
+    <Compile Include="Migrations\202303081718449_dbMigration1.designer.cs">
+      <DependentUpon>202303081718449_dbMigration1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -225,7 +174,13 @@
     <Compile Include="Views\Controls\LookUpEditors\CurrencyGridLookUpEdit.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Views\Controls\LookUpEditors\ItemTypeGridLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Views\Controls\LookUpEditors\JournalTypeGridLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\LookUpEditors\UnitGridLookUpEdit.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Views\Core\Dialogs\SystemStyleDialog.cs">
@@ -330,11 +285,41 @@
     <Compile Include="Views\Core\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\Inventory\ItemTypeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Inventory\ItemTypeView.Designer.cs">
+      <DependentUpon>ItemTypeView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\Inventory\ItemView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\UserControls\Inventory\ItemView.Designer.cs">
       <DependentUpon>ItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Inventory\ItemTypeCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Inventory\ItemTypeCollectionView.Designer.cs">
+      <DependentUpon>ItemTypeCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Inventory\UnitView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Inventory\UnitView.Designer.cs">
+      <DependentUpon>UnitView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Inventory\UnitCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Inventory\UnitCollectionView.Designer.cs">
+      <DependentUpon>UnitCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Inventory\ItemCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Inventory\ItemCollectionView.Designer.cs">
+      <DependentUpon>ItemCollectionView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Lang\Languages.ar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -344,53 +329,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Languages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainView.ar.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302130017353_InitDatabase.resx">
-      <DependentUpon>202302130017353_InitDatabase.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303081700404_dbMigration.resx">
+      <DependentUpon>202303081700404_dbMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302131740273_addPermissionsTables.resx">
-      <DependentUpon>202302131740273_addPermissionsTables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302131800187_EditUserViewTable.resx">
-      <DependentUpon>202302131800187_EditUserViewTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302131924301_EditUsersTable.resx">
-      <DependentUpon>202302131924301_EditUsersTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302131929369_EditUsersTable2.resx">
-      <DependentUpon>202302131929369_EditUsersTable2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302131935405_EditUsersTableAddEnabledProperty.resx">
-      <DependentUpon>202302131935405_EditUsersTableAddEnabledProperty.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302132047036_UpdateLogs.resx">
-      <DependentUpon>202302132047036_UpdateLogs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302132104575_EditUserData.resx">
-      <DependentUpon>202302132104575_EditUserData.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302140000488_UpdateTransactionEntityData.resx">
-      <DependentUpon>202302140000488_UpdateTransactionEntityData.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302140009593_UpdateTransactionDateTime.resx">
-      <DependentUpon>202302140009593_UpdateTransactionDateTime.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302140117180_UpdateTransactionEntityData2.resx">
-      <DependentUpon>202302140117180_UpdateTransactionEntityData2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302142114518_UpdateHashedPassword.resx">
-      <DependentUpon>202302142114518_UpdateHashedPassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302142149314_UpdateJournalTypeAndView.resx">
-      <DependentUpon>202302142149314_UpdateJournalTypeAndView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302142226093_UpdateJournalTypes.resx">
-      <DependentUpon>202302142226093_UpdateJournalTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302160043053_FixInventory.resx">
-      <DependentUpon>202302160043053_FixInventory.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303081718449_dbMigration1.resx">
+      <DependentUpon>202303081718449_dbMigration1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -420,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Core\Dialogs\ExceptionDialog.resx">
       <DependentUpon>ExceptionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Core\LoginForm.ar.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Dashboard\DashboardUserControl.resx">
       <DependentUpon>DashboardUserControl.cs</DependentUpon>
@@ -466,8 +418,23 @@
     <EmbeddedResource Include="Views\Core\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Inventory\ItemCollectionView.resx">
+      <DependentUpon>ItemCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Inventory\ItemTypeCollectionView.resx">
+      <DependentUpon>ItemTypeCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Inventory\ItemTypeView.resx">
+      <DependentUpon>ItemTypeView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Inventory\ItemView.resx">
       <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Inventory\UnitCollectionView.resx">
+      <DependentUpon>UnitCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Inventory\UnitView.resx">
+      <DependentUpon>UnitView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -567,6 +534,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrowbearright.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productquickshippments.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_store.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rulervertical.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itemtypestandard1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_product_group.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

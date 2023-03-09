@@ -41,6 +41,7 @@ namespace Ebda3Soft.Core.Database
         public virtual DbSet<ItemType> ItemTypes { get; set; }
         public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<Unit> Units { get; set; }
+        public virtual DbSet<ItemUnit> ItemUnits { get; set; }
 
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<TransactionLog> TransactionLogs { get; set; }

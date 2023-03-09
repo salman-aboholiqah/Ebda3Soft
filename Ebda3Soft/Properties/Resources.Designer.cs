@@ -113,6 +113,16 @@ namespace Ebda3Soft.Properties {
         /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage bo_product_group {
+            get {
+                object obj = ResourceManager.GetObject("bo_product_group", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage bo_user {
             get {
                 object obj = ResourceManager.GetObject("bo_user", resourceCulture);
@@ -223,6 +233,16 @@ namespace Ebda3Soft.Properties {
         /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage itemtypestandard1 {
+            get {
+                object obj = ResourceManager.GetObject("itemtypestandard1", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage language {
             get {
                 object obj = ResourceManager.GetObject("language", resourceCulture);
@@ -253,6 +273,26 @@ namespace Ebda3Soft.Properties {
         /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage productquickshippments {
+            get {
+                object obj = ResourceManager.GetObject("productquickshippments", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage rulervertical {
+            get {
+                object obj = ResourceManager.GetObject("rulervertical", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage security_key {
             get {
                 object obj = ResourceManager.GetObject("security_key", resourceCulture);
@@ -276,6 +316,16 @@ namespace Ebda3Soft.Properties {
         internal static DevExpress.Utils.Svg.SvgImage servermode {
             get {
                 object obj = ResourceManager.GetObject("servermode", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage shopping_store {
+            get {
+                object obj = ResourceManager.GetObject("shopping_store", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }

@@ -24,6 +24,7 @@ namespace Ebda3Soft.Views.UserControls.Financial
         public JournalTypeCollectionView()
         {
             InitializeComponent();
+            SharedView.SetTranslate(ribbonControl.Pages);
 
 
             dbContext = SQLServerDbContext.Instance;

@@ -156,6 +156,15 @@
   <data name="bbiDashboard.Caption" xml:space="preserve">
     <value>Dashboard</value>
   </data>
+  <data name="bbiUnits.Caption" xml:space="preserve">
+    <value>Units</value>
+  </data>
+  <data name="bbiItemTypes.Caption" xml:space="preserve">
+    <value>Item Types</value>
+  </data>
+  <data name="bbiItems.Caption" xml:space="preserve">
+    <value>Items</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ribbonControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -350,6 +359,24 @@
   <data name="&gt;&gt;bbiDashboard.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;bbiUnits.Name" xml:space="preserve">
+    <value>bbiUnits</value>
+  </data>
+  <data name="&gt;&gt;bbiUnits.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bbiItemTypes.Name" xml:space="preserve">
+    <value>bbiItemTypes</value>
+  </data>
+  <data name="&gt;&gt;bbiItemTypes.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bbiItems.Name" xml:space="preserve">
+    <value>bbiItems</value>
+  </data>
+  <data name="&gt;&gt;bbiItems.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;ribbonMiniToolbar1.Name" xml:space="preserve">
     <value>ribbonMiniToolbar1</value>
   </data>
@@ -384,6 +411,18 @@
     <value>ribbonPageGroup3</value>
   </data>
   <data name="&gt;&gt;ribbonPageGroup3.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage5.Name" xml:space="preserve">
+    <value>ribbonPage5</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage5.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup7.Name" xml:space="preserve">
+    <value>ribbonPageGroup7</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup7.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;ribbonPage2.Name" xml:space="preserve">
@@ -502,6 +541,12 @@
   </data>
   <data name="ribbonPage1.Text" xml:space="preserve">
     <value>Financial</value>
+  </data>
+  <data name="ribbonPageGroup7.Text" xml:space="preserve">
+    <value>Intialize</value>
+  </data>
+  <data name="ribbonPage5.Text" xml:space="preserve">
+    <value>Inventory</value>
   </data>
   <data name="ribbonPageGroup2.Text" xml:space="preserve">
     <value>Initialize</value>

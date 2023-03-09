@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraBars.Docking2010.Views.Tabbed;
+﻿using DevExpress.XtraBars;
+using DevExpress.XtraBars.Docking2010.Views.Tabbed;
 using DevExpress.XtraEditors;
 using Ebda3Soft.Core;
 using Ebda3Soft.Core.Database;
@@ -7,6 +8,7 @@ using Ebda3Soft.Views.Dashboard;
 using Ebda3Soft.Views.UserControls;
 using Ebda3Soft.Views.UserControls.Financial;
 using Ebda3Soft.Views.UserControls.GeneralSettings;
+using Ebda3Soft.Views.UserControls.Inventory;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,23 +42,28 @@ namespace Ebda3Soft
 
         private void bbiAccountTypes_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            tabbedView1.AddDocument(new AccountTypeCollectionView(), "Account Types");
+            var item = (e.Item as BarButtonItem);
+            tabbedView1.AddDocument(new AccountTypeCollectionView(), item?.Caption);
         }
 
         private void ribbonControl1_Merge(object sender, DevExpress.XtraBars.Ribbon.RibbonMergeEventArgs e)
         {
+            
             ribbonControl1.SelectPage(e.MergedChild.Pages.First());
         }
 
         private void bbiCurrencies_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            tabbedView1.AddDocument(new CurrencyCollectionView(), "Currencies");
+            var item = (e.Item as BarButtonItem);
+            tabbedView1.AddDocument(new CurrencyCollectionView(), item?.Caption);
 
         }
 
         private void bbiAccounts_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            tabbedView1.AddDocument(new AccountCollectionView(), "Accounts");
+            var item = (e.Item as BarButtonItem);
+            tabbedView1.AddDocument(new AccountCollectionView(), item?.Caption); 
+
 
         }
         private void Login()
@@ -115,29 +122,47 @@ namespace Ebda3Soft
 
         private void bbiUsers_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            tabbedView1.AddDocument(new UserCollectionView(), "Users");
+            var item = (e.Item as BarButtonItem);
+
+            tabbedView1.AddDocument(new UserCollectionView(
+
+                ), item?.Caption);
+            //tabbedView1.AddDocument(new UserCollectionView(), "Users");
 
         }
 
         private void bbiJournalTypes_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            tabbedView1.AddDocument(new JournalTypeCollectionView(), "Journal Types");
+            var item = (e.Item as BarButtonItem);
+
+            tabbedView1.AddDocument(new JournalTypeCollectionView(
+              
+                ), item?.Caption);
+            //tabbedView1.AddDocument(new JournalTypeCollectionView(), "Journal Types");
 
         }
 
         private void bbiJournals_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            tabbedView1.AddDocument(new JournalCollectionView(), "All Journals");
+            var item = (e.Item as BarButtonItem);
+
+            tabbedView1.AddDocument(new JournalCollectionView(
+
+                ), item?.Caption);
+            //tabbedView1.AddDocument(new JournalCollectionView(), "All Journals");
         }
 
         private void bbiReceipts_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            tabbedView1.AddDocument(new JournalCollectionView(Core.Enums.JournalFormView.Recetip), "Receipts");
+            
+            var item = (e.Item as BarButtonItem);
+            tabbedView1.AddDocument(new JournalCollectionView(Core.Enums.JournalFormView.Recetip), item?.Caption);
 
         }
         private void bbiPayments_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            tabbedView1.AddDocument(new JournalCollectionView(Core.Enums.JournalFormView.Payment), "Payement");
+            var item = (e.Item as BarButtonItem);
+            tabbedView1.AddDocument(new JournalCollectionView(Core.Enums.JournalFormView.Payment), item?.Caption);
         }
 
         private void bbiCultureSettings_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -149,14 +174,16 @@ namespace Ebda3Soft
         {
             Properties.Settings.Default.SelectedSkin = DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName;
             Properties.Settings.Default.SelectedPallete = DevExpress.LookAndFeel.UserLookAndFeel.Default.ActiveSvgPaletteName;
+            Properties.Settings.Default.Save();
         }
 
         private void bbiSimpleJournal_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            var item = (e.Item as BarButtonItem);
 
             tabbedView1.AddDocument(new JournalCollectionView(
                 Core.Enums.JournalFormView.SimpleJournal
-                ), "Simple Journal");
+                ), item?.Caption);
 
         }
 
@@ -169,7 +196,8 @@ namespace Ebda3Soft
         {
             if (dashboard == null || dashboard.IsDisposed)
                 dashboard = new DashboardUserControl();
-            tabbedView1.AddDocument(dashboard, "Dashboard");
+            var item = (e.Item as BarButtonItem);
+            tabbedView1.AddDocument(dashboard, item?.Caption);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -180,6 +208,27 @@ namespace Ebda3Soft
         private void bbiLogout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Login();
+        }
+
+        private void bbiUnits_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var item = (e.Item as BarButtonItem);
+            tabbedView1.AddDocument(new UnitCollectionView(), item?.Caption ?? "");
+
+        }
+
+        private void bbiItemTypes_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var item = (e.Item as BarButtonItem);
+            tabbedView1.AddDocument(new ItemTypeCollectionView(), item?.Caption ?? "");
+
+        }
+
+        private void bbiItems_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var item = (e.Item as BarButtonItem);
+            tabbedView1.AddDocument(new ItemCollectionView(), item?.Caption ?? "").ImageOptions.Image = item.ImageOptions.Image;
+
         }
     }
 }

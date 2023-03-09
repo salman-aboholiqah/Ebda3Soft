@@ -81,9 +81,18 @@ namespace Ebda3Soft.Lang {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string AccountType {
+        internal static string Accounts {
             get {
-                return ResourceManager.GetString("AccountType", resourceCulture);
+                return ResourceManager.GetString("Accounts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string AccountTypeName {
+            get {
+                return ResourceManager.GetString("AccountTypeName", resourceCulture);
             }
         }
         
@@ -99,9 +108,36 @@ namespace Ebda3Soft.Lang {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        internal static string CountOfDecimals {
+            get {
+                return ResourceManager.GetString("CountOfDecimals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         internal static string Credit {
             get {
                 return ResourceManager.GetString("Credit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Currencies {
+            get {
+                return ResourceManager.GetString("Currencies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Currency {
+            get {
+                return ResourceManager.GetString("Currency", resourceCulture);
             }
         }
         
@@ -120,6 +156,33 @@ namespace Ebda3Soft.Lang {
         internal static string Debit {
             get {
                 return ResourceManager.GetString("Debit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Home {
+            get {
+                return ResourceManager.GetString("Home", resourceCulture);
             }
         }
         
@@ -180,6 +243,15 @@ namespace Ebda3Soft.Lang {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        internal static string Items {
+            get {
+                return ResourceManager.GetString("Items", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         internal static string ItemTypeName {
             get {
                 return ResourceManager.GetString("ItemTypeName", resourceCulture);
@@ -207,9 +279,45 @@ namespace Ebda3Soft.Lang {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        internal static string New {
+            get {
+                return ResourceManager.GetString("New", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         internal static string Price {
             get {
                 return ResourceManager.GetString("Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print and Export.
+        /// </summary>
+        internal static string PrintandExport {
+            get {
+                return ResourceManager.GetString("PrintandExport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print Preview.
+        /// </summary>
+        internal static string PrintPreview {
+            get {
+                return ResourceManager.GetString("PrintPreview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Refresh {
+            get {
+                return ResourceManager.GetString("Refresh", resourceCulture);
             }
         }
         
@@ -234,9 +342,27 @@ namespace Ebda3Soft.Lang {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string SubCurrency {
+        internal static string SubCurrencyName {
             get {
-                return ResourceManager.GetString("SubCurrency", resourceCulture);
+                return ResourceManager.GetString("SubCurrencyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Tasks {
+            get {
+                return ResourceManager.GetString("Tasks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string TypeName {
+            get {
+                return ResourceManager.GetString("TypeName", resourceCulture);
             }
         }
         

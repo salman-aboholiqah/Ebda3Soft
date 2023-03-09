@@ -11,6 +11,7 @@ namespace Ebda3Soft.Core
 {
     public class SharedFormat
     {
+        
         public static void WriteXmlFormat<T>(T obj, XmlWriter writer)
         {
             try

@@ -9,8 +9,7 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
-            
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Ebda3Soft.Core.Database.SQLServerDbContext context)

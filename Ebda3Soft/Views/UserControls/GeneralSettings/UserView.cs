@@ -50,7 +50,9 @@ namespace Ebda3Soft.Views.UserControls.GeneralSettings
         public UserView(BindingSource bindingSource, TransactionType transactionType,bool isFirstTime = false)
         {
             InitializeComponent();
-
+            SharedView.SetTranslate(dataLayoutControl1);
+            SharedView.SetTranslate(IsAdminCheckEdit);
+            SharedView.SetTranslate(IsSuperAdminCheckEdit);
             dbContext = new SQLServerDbContext();
 
             this.bindingSource.DataSource = bindingSource;

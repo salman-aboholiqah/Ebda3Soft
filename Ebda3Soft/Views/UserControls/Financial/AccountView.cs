@@ -85,8 +85,8 @@ namespace Ebda3Soft.Views.UserControls.Financial
             BaseEntity.BindingSource = new BindingSource();
             BaseEntity.BindingSource = bindingSource;
             BaseEntity.TransactionType = transactionType;
-            BaseEntity.EntitySaved += (e) => ItemForCurrencies.Enabled = true;
-            BaseEntity.InitNew += (e) => ItemForCurrencies.Enabled = false;
+            BaseEntity.EntitySaved += (e) => ItemForCurrencies.Enabled= ItemForCurrency.Enabled = true;
+            BaseEntity.InitNew += (e) => ItemForCurrencies.Enabled = ItemForCurrency.Enabled = false;
         }
         private void currencyGridLookUpEdit1_Properties_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {

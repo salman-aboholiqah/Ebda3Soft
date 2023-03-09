@@ -957,19 +957,16 @@ namespace Ebda3Soft.Views.Dashboard
             // 
             this.dashboardDesigner1.AsyncMode = true;
             this.dashboardDesigner1.BarAndDockingController = this.dashboardBarAndDockingController1;
-            this.dashboardDesigner1.DataSourceWizard.AvailableDataSourceTypes = ((DevExpress.DashboardWin.DashboardDesignerDataSourceType)(((((((DevExpress.DashboardWin.DashboardDesignerDataSourceType.Sql | DevExpress.DashboardWin.DashboardDesignerDataSourceType.Olap) 
-            | DevExpress.DashboardWin.DashboardDesignerDataSourceType.EF) 
-            | DevExpress.DashboardWin.DashboardDesignerDataSourceType.Excel) 
-            | DevExpress.DashboardWin.DashboardDesignerDataSourceType.Extract) 
-            | DevExpress.DashboardWin.DashboardDesignerDataSourceType.Federation) 
-            | DevExpress.DashboardWin.DashboardDesignerDataSourceType.Json)));
+            this.dashboardDesigner1.DataSourceWizard.AvailableDataSourceTypes = DevExpress.DashboardWin.DashboardDesignerDataSourceType.EF;
             this.dashboardDesigner1.DataSourceWizard.EFWizardSettings.ShowBrowseButton = true;
+            this.dashboardDesigner1.DataSourceWizard.ShowConnectionsFromAppConfig = true;
+            this.dashboardDesigner1.DataSourceWizard.ShowDataSourceNamePage = true;
             this.dashboardDesigner1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dashboardDesigner1.Location = new System.Drawing.Point(0, 150);
             this.dashboardDesigner1.MenuManager = this.ribbonControl1;
             this.dashboardDesigner1.Name = "dashboardDesigner1";
             this.dashboardDesigner1.PopupMenu = this.dashboardPopupMenu1;
-            this.dashboardDesigner1.Size = new System.Drawing.Size(886, 269);
+            this.dashboardDesigner1.Size = new System.Drawing.Size(1026, 269);
             this.dashboardDesigner1.TabIndex = 0;
             // 
             // ribbonControl1
@@ -1488,7 +1485,7 @@ namespace Ebda3Soft.Views.Dashboard
             this.repositoryItemBorderLineWeight1,
             this.repositoryItemFloatingObjectOutlineWeight1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.Size = new System.Drawing.Size(886, 150);
+            this.ribbonControl1.Size = new System.Drawing.Size(1026, 150);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Above;
             // 
             // dashboardBackstageViewControl1
@@ -7741,7 +7738,7 @@ namespace Ebda3Soft.Views.Dashboard
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.dashboardBackstageViewControl1);
             this.Name = "DashboardUserControl";
-            this.Size = new System.Drawing.Size(886, 419);
+            this.Size = new System.Drawing.Size(1026, 419);
             ((System.ComponentModel.ISupportInitialize)(this.dashboardDesigner1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardBarAndDockingController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();

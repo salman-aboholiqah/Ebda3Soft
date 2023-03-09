@@ -123,19 +123,40 @@
   <data name="AccountNumber" xml:space="preserve">
     <value />
   </data>
-  <data name="AccountType" xml:space="preserve">
+  <data name="Accounts" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AccountTypeName" xml:space="preserve">
     <value />
   </data>
   <data name="Cost" xml:space="preserve">
     <value />
   </data>
+  <data name="CountOfDecimals" xml:space="preserve">
+    <value />
+  </data>
   <data name="Credit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Currencies" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Currency" xml:space="preserve">
     <value />
   </data>
   <data name="CurrencyName" xml:space="preserve">
     <value />
   </data>
   <data name="Debit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Home" xml:space="preserve">
     <value />
   </data>
   <data name="IsCash" xml:space="preserve">
@@ -156,6 +177,9 @@
   <data name="ItemNumber" xml:space="preserve">
     <value />
   </data>
+  <data name="Items" xml:space="preserve">
+    <value />
+  </data>
   <data name="ItemTypeName" xml:space="preserve">
     <value />
   </data>
@@ -165,7 +189,19 @@
   <data name="JournalViewForm" xml:space="preserve">
     <value />
   </data>
+  <data name="New" xml:space="preserve">
+    <value />
+  </data>
   <data name="Price" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PrintandExport" xml:space="preserve">
+    <value>Print and Export</value>
+  </data>
+  <data name="PrintPreview" xml:space="preserve">
+    <value>Print Preview</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
     <value />
   </data>
   <data name="ShortCut" xml:space="preserve">
@@ -174,7 +210,13 @@
   <data name="Sign" xml:space="preserve">
     <value />
   </data>
-  <data name="SubCurrency" xml:space="preserve">
+  <data name="SubCurrencyName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Tasks" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeName" xml:space="preserve">
     <value />
   </data>
   <data name="UnitName" xml:space="preserve">

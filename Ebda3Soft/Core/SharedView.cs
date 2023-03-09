@@ -1,27 +1,51 @@
-﻿using DevExpress.XtraEditors;
-using DevExpress.XtraEditors.Repository;
+﻿using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraEditors;
 using DevExpress.XtraLayout;
 using Ebda3Soft.Core.CustomAttributes;
 using Ebda3Soft.Core.Database.Entities.Financial;
 using Ebda3Soft.Core.Database.Entities.GeneralSettings;
-using Ebda3Soft.Core.Database.Interfaces;
 using Ebda3Soft.Core.Enums;
 using Ebda3Soft.Core.Models;
-using Ebda3Soft.Views.Controls;
 using Ebda3Soft.Views.Core.Dialogs;
-using Ebda3Soft.Views.UserControls;
 using Ebda3Soft.Views.UserControls.Financial;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Ebda3Soft.Core
 {
     public class SharedView
     {
+        public static void SetTranslate(RibbonPageCollection pages)
+        {
+            foreach (RibbonPage page in pages)
+            {
+                var pageTranslation = new LocalizableDisplayNameAttribute(page.Text.Replace(" ", ""))?.DisplayName;
+                if (pageTranslation != null)
+                {
+                    page.Text = pageTranslation;
+                }
+                foreach (RibbonPageGroup group in page.Groups)
+                {
+                    var groupTranslation = new LocalizableDisplayNameAttribute(group.Text.Replace(" ", ""))?.DisplayName;
+                    if (groupTranslation != null)
+                    {
+                        group.Text = groupTranslation;
+                    }
+                    
+                    foreach (BarButtonItemLink item in group.ItemLinks)
+                    {
+                        var itemTranslation = new LocalizableDisplayNameAttribute(item.Caption.Replace(" ", ""))?.DisplayName;
+                        if (itemTranslation != null)
+                        {
+                            item.Caption = itemTranslation;
+                        }
+                    }
+                }
+            }
+        }
         public static void SetTranslate(BaseEdit item)
         {
             var translation = new LocalizableDisplayNameAttribute(item.Text.Replace(" ",""))?.DisplayName;

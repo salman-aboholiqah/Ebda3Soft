@@ -21,6 +21,7 @@ namespace Ebda3Soft.Core.Database.Entities.Financial
         [ForeignKey("JournalTypeID")]
         public JournalType JournalType { get; set; }
         public long JournalNumber { get; set; }
+        public string JournalCode { get => JournalType?.ShortCode + " " + JournalNumber; }
         public DateTime JournalDate { get; set; } = DateTime.Now;
 
         public String Description { get; set; }
@@ -61,7 +62,7 @@ namespace Ebda3Soft.Core.Database.Entities.Financial
                 return false;
             }
 
-            if (JournalDetails.Count(a => a.AccountID == Guid.Empty)>0)
+            if (JournalDetails.Count(a => a.AccountID == Guid.Empty) > 0)
             {
                 FlyoutDialog.Show(this.ParentForm, "Error", "You have to enter the the accounts", MessageBoxButtons.OK);
                 return false;

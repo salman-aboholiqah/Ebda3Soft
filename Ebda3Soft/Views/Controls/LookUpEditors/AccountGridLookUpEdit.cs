@@ -50,10 +50,10 @@ namespace Ebda3Soft.Views.Controls.LookUpEditors
             this.gridView.OptionsView.ColumnAutoWidth = false;
             this.gridView.OptionsView.ShowGroupPanel = false;
 
-            Properties.Buttons.Clear();
-            if (Properties.Buttons.Count < 1)
+            Buttons.Clear();
+            if (Buttons.Count < 1)
             {
-                Properties.Buttons.Add(new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo));
+                Buttons.Add(new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo));
             }
             if (Buttons.Count < 2)
             {

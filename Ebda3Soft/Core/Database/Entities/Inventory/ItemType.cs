@@ -14,7 +14,7 @@ namespace Ebda3Soft.Core.Database.Entities.Inventory
     {
         [Display(Order = -1, AutoGenerateField = false)]
         public Guid ItemTypeID { get; set; } = Guid.NewGuid();
-        [Required,StringLength(250), Index(IsUnique = true), LocalizableDisplayName(typeof(Languages), "ItemTypeName")]
+        [Required, StringLength(250), Index(IsUnique = true), LocalizableDisplayName(typeof(Languages), "ItemTypeName")]
         public String TypeName { get; set; }
 
         public virtual ICollection<Item> Items { get; set; }
